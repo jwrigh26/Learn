@@ -1,0 +1,43 @@
+{
+  "departments": {
+    "engineering": [
+      "engineering",
+      "eng",
+      "platform",
+      "product engineering"
+    ],
+    "hr": [
+      "hr",
+      "human resources"
+    ],
+    "sales": [
+      "sales",
+      "bizdev",
+      "business development"
+    ],
+    "product": [
+      "product",
+      "pm",
+      "program management"
+    ]
+  },
+  "roles": {
+    "manager": [
+      "manager",
+      "supervisor",
+      "team lead",
+      "lead"
+    ],
+    "engineer": [
+      "engineer",
+      "developer",
+      "dev",
+      "software engineer"
+    ],
+    "pm": [
+      "pm",
+      "product manager",
+      "program manager"
+    ]
+  }
+}
