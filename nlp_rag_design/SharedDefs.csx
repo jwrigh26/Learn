@@ -1,0 +1,3 @@
+public enum Intent { GetContactInfo, FilterByHireDate, FilterByRole, SearchByDepartment, Unknown }
+public interface IIntentClassifier { (Intent intent, double confidence) Classify(string query); }
+// …add any other shared records/interfaces…
