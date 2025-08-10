@@ -1,0 +1,66 @@
+1. Convert labesl to keys: Map Value to keys
+2. Featurize text with TextFeaturizer: Bag of words & n-grams
+3. Train a multi-class classifer (SDCA Maximum Entropy)
+4. Convert predicated keys back to string labesl
+
+---
+
+1. Convert labels to keys:
+- HIRE_CATE => 0.x01234
+
+2. Featurize text with bag of words and n-grams
+- Break the text into words ( tokens )
+- Count how many times each word appears
+- Ignore word order and grammar
+
+Example: Show me the department list
+
+
+- Bag of Words:
+    - Show, 1, me, 1, the, 1, department, 1, list, 1
+- N-grams:
+    - Sequences of N words ( or characters ) in a row.
+        - Unigrams: single-words
+        - Bigrams: pairs
+        - Trigrams: triplets
+        - etc.
+
+Example: Bi-grams
+    - Text: "Show me the department list"
+    - Bi-grams: 
+        - Show me
+        - me the
+        - the department
+        - department list
+    
+TextFeaturizer: Uses both bag-or-words and n-grams to create features for your classifer. This helps the model understand both individual words and short word sequences in your queries
+
+3. Train a multi-class classifer (SDCA Maximum Entropy)
+- multi-class means the model can pick from more than two categories:
+    - GetContactInfo, FilterByHireDate
+- The model predictds **which one** best matches the input
+- Binary classification is yes/no
+SDCA: Stochastic Dual Coordinate Ascent
+- It's an alogrithm for training certain types of ML models
+- It's Math, we just need to know it's features
+- Maximum Entropy: A type of model ( aslo called: logisitic regression for multi-class problems).
+    - It tries to pick the most likely class for each input based on trianing data.
+    - Maximum Entropy means it makes as few assumptinos as possible letting the date speak for itself
+    - SdcaMaximumEntropy: A built-in trianer for multi-class classification.
+        - Great default for text classification tasks like intent detection.
+
+4. Convert predicated keys back to string labels
+    - Label: The orginal string name for a category ( like GET_CONTACT_INFO )
+    - Key: A numeric ID that ML.NET uses internally ( like 0,1,2,etc ).
+    - ML.NET words faster with numbers not strings
+    
+Before trainig, we convert string labels to numeric keys ( MapValueToKey )
+
+Example: GET_CONTACT_INFO -> 0.
+
+We convert back so humans can understand. The model gives you a number, your app wants a string, so
+after prediction, we convert the key back to the original label: MapKeyToValue.
+
+Summary:
+- Step 1: Convert the string labels -> numberic keys ( for training )
+- Step 4: Convert numeric keys -> string labels ( for human-readable output )
