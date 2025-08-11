@@ -1,0 +1,14 @@
+namespace MLIntentClassifierAPI.Models;
+
+public enum Intent
+{
+    GET_CONTACT_ADDRESS,
+    GET_CONTACT_INFO,
+    GET_CONTACT_PHONE,
+    GET_CONTACT_EMAIL,
+    FILTER_BY_HIRE_DATE,
+    FILTER_BY_DEPARTMENT,
+    FILTER_BY_LOCATION,
+    FILTER_BY_BIRTHDAY,
+    UNKNOWN
+}

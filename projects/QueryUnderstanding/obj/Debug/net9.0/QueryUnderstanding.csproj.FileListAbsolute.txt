@@ -1,0 +1,15 @@
+/Users/maneki-neko/learning/projects/QueryUnderstanding/bin/Debug/net9.0/QueryUnderstanding
+/Users/maneki-neko/learning/projects/QueryUnderstanding/bin/Debug/net9.0/QueryUnderstanding.deps.json
+/Users/maneki-neko/learning/projects/QueryUnderstanding/bin/Debug/net9.0/QueryUnderstanding.runtimeconfig.json
+/Users/maneki-neko/learning/projects/QueryUnderstanding/bin/Debug/net9.0/QueryUnderstanding.dll
+/Users/maneki-neko/learning/projects/QueryUnderstanding/bin/Debug/net9.0/QueryUnderstanding.pdb
+/Users/maneki-neko/learning/projects/QueryUnderstanding/obj/Debug/net9.0/QueryUnderstanding.GeneratedMSBuildEditorConfig.editorconfig
+/Users/maneki-neko/learning/projects/QueryUnderstanding/obj/Debug/net9.0/QueryUnderstanding.AssemblyInfoInputs.cache
+/Users/maneki-neko/learning/projects/QueryUnderstanding/obj/Debug/net9.0/QueryUnderstanding.AssemblyInfo.cs
+/Users/maneki-neko/learning/projects/QueryUnderstanding/obj/Debug/net9.0/QueryUnderstanding.csproj.CoreCompileInputs.cache
+/Users/maneki-neko/learning/projects/QueryUnderstanding/obj/Debug/net9.0/QueryUnderstanding.sourcelink.json
+/Users/maneki-neko/learning/projects/QueryUnderstanding/obj/Debug/net9.0/QueryUnderstanding.dll
+/Users/maneki-neko/learning/projects/QueryUnderstanding/obj/Debug/net9.0/refint/QueryUnderstanding.dll
+/Users/maneki-neko/learning/projects/QueryUnderstanding/obj/Debug/net9.0/QueryUnderstanding.pdb
+/Users/maneki-neko/learning/projects/QueryUnderstanding/obj/Debug/net9.0/QueryUnderstanding.genruntimeconfig.cache
+/Users/maneki-neko/learning/projects/QueryUnderstanding/obj/Debug/net9.0/ref/QueryUnderstanding.dll
