@@ -18,7 +18,7 @@ public class QueryController : ControllerBase
     }
 
     [HttpPost("understand")]
-    public ActionResult<QueryUnderstanding> UnderstandQuery([FromBody] QueryRequest request)
+    public ActionResult<object> UnderstandQuery([FromBody] QueryRequest request)
     {
         if (string.IsNullOrWhiteSpace(request.Text))
         {
@@ -30,8 +30,16 @@ public class QueryController : ControllerBase
             var understanding = _queryService.Understand(request.Text);
             _logger.LogInformation("Processed query: {Query} -> Intent: {Intent}", 
                 request.Text, understanding.Intent);
-            
-            return Ok(understanding);
+
+            // Project intent as object with id and label
+            var result = new {
+                intent = new {
+                    id = (int)understanding.Intent,
+                    label = understanding.Intent.ToString()
+                },
+                slots = understanding.Slots
+            };
+            return Ok(result);
         }
         catch (Exception ex)
         {
@@ -51,7 +59,7 @@ public class QueryController : ControllerBase
     }
 
     [HttpGet("test-queries")]
-    public ActionResult<List<QueryUnderstanding>> TestQueries()
+    public ActionResult<List<object>> TestQueries()
     {
         var testQueries = new[]
         {
@@ -63,10 +71,15 @@ public class QueryController : ControllerBase
             "Directors hired after last year in sales"
         };
 
-        var results = testQueries.Select(q => new
-        {
-            Query = q,
-            Understanding = _queryService.Understand(q)
+        var results = testQueries.Select(q => new {
+            query = q,
+            understanding = new {
+                intent = new {
+                    id = (int)_queryService.Understand(q).Intent,
+                    label = _queryService.Understand(q).Intent.ToString()
+                },
+                slots = _queryService.Understand(q).Slots
+            }
         }).ToList();
 
         return Ok(results);
