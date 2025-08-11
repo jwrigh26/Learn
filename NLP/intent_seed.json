@@ -1,0 +1,730 @@
+[
+  {
+    "Text": "contact JOHN by phone",
+    "Label": "GET_CONTACT_PHONE"
+  },
+  {
+    "Text": "give me casey's direct line",
+    "Label": "GET_CONTACT_PHONE"
+  },
+  {
+    "Text": "people working in support",
+    "Label": "FILTER_BY_DEPARTMENT"
+  },
+  {
+    "Text": "list people in human resources",
+    "Label": "FILTER_BY_DEPARTMENT"
+  },
+  {
+    "Text": "list employees with birthday next month",
+    "Label": "FILTER_BY_BIRTHDAY"
+  },
+  {
+    "Text": "people with date of birth before 2000 in engineering",
+    "Label": "FILTER_BY_BIRTHDAY"
+  },
+  {
+    "Text": "give me O'BRIEN's direct line",
+    "Label": "GET_CONTACT_PHONE"
+  },
+  {
+    "Text": "show employees with start date in 2021",
+    "Label": "FILTER_BY_HIRE_DATE"
+  },
+  {
+    "Text": "human resources team members",
+    "Label": "FILTER_BY_DEPARTMENT"
+  },
+  {
+    "Text": "list NYC team",
+    "Label": "FILTER_BY_LOCATION"
+  },
+  {
+    "Text": "phone for o'brien",
+    "Label": "GET_CONTACT_PHONE"
+  },
+  {
+    "Text": "I need directors",
+    "Label": "FILTER_BY_ROLE"
+  },
+  {
+    "Text": "headcount for design",
+    "Label": "FILTER_BY_DEPARTMENT"
+  },
+  {
+    "Text": "employees hired before 2021",
+    "Label": "FILTER_BY_HIRE_DATE"
+  },
+  {
+    "Text": "list employees with whose birthday is today",
+    "Label": "FILTER_BY_BIRTHDAY"
+  },
+  {
+    "Text": "how do I email RICK?",
+    "Label": "GET_CONTACT_EMAIL"
+  },
+  {
+    "Text": "new hires prior to 2020",
+    "Label": "FILTER_BY_HIRE_DATE"
+  },
+  {
+    "Text": "search senior engineers",
+    "Label": "FILTER_BY_ROLE"
+  },
+  {
+    "Text": "hr team members",
+    "Label": "FILTER_BY_DEPARTMENT"
+  },
+  {
+    "Text": "who has birthday next month?",
+    "Label": "FILTER_BY_BIRTHDAY"
+  },
+  {
+    "Text": "anyone with turning 30 this year?",
+    "Label": "FILTER_BY_BIRTHDAY"
+  },
+  {
+    "Text": "hr team members",
+    "Label": "FILTER_BY_DEPARTMENT"
+  },
+  {
+    "Text": "email for JOHN",
+    "Label": "GET_CONTACT_EMAIL"
+  },
+  {
+    "Text": "how to send mail to JERRY SMITH",
+    "Label": "GET_CONTACT_ADDRESS"
+  },
+  {
+    "Text": "what is Morgan Lee's office address",
+    "Label": "GET_CONTACT_ADDRESS"
+  },
+  {
+    "Text": "work address for jerry smith",
+    "Label": "GET_CONTACT_ADDRESS"
+  },
+  {
+    "Text": "what is María García information",
+    "Label": "GET_CONTACT_INFO"
+  },
+  {
+    "Text": "filter by turning 30 this year",
+    "Label": "FILTER_BY_BIRTHDAY"
+  },
+  {
+    "Text": "any openings in eng?",
+    "Label": "FILTER_BY_DEPARTMENT"
+  },
+  {
+    "Text": "find designers",
+    "Label": "FILTER_BY_ROLE"
+  },
+  {
+    "Text": "anyone joined before 2021?",
+    "Label": "FILTER_BY_HIRE_DATE"
+  },
+  {
+    "Text": "any openings in dev?",
+    "Label": "FILTER_BY_DEPARTMENT"
+  },
+  {
+    "Text": "find birthdays this week",
+    "Label": "FILTER_BY_BIRTHDAY"
+  },
+  {
+    "Text": "upcoming turning 30 this year",
+    "Label": "FILTER_BY_BIRTHDAY"
+  },
+  {
+    "Text": "show me SUMMER's email address",
+    "Label": "GET_CONTACT_EMAIL"
+  },
+  {
+    "Text": "people hired from 2020 to 2021 in marketing",
+    "Label": "FILTER_BY_HIRE_DATE"
+  },
+  {
+    "Text": "search staff engineers",
+    "Label": "FILTER_BY_ROLE"
+  },
+  {
+    "Text": "what’s li wei's details",
+    "Label": "GET_CONTACT_INFO"
+  },
+  {
+    "Text": "employees based in Salt Lake City",
+    "Label": "FILTER_BY_LOCATION"
+  },
+  {
+    "Text": "phone for O'BRIEN",
+    "Label": "GET_CONTACT_PHONE"
+  },
+  {
+    "Text": "anyone near Tokyo",
+    "Label": "FILTER_BY_LOCATION"
+  },
+  {
+    "Text": "best number for rick sanchez",
+    "Label": "GET_CONTACT_PHONE"
+  },
+  {
+    "Text": "filter by DOB after 1990",
+    "Label": "FILTER_BY_BIRTHDAY"
+  },
+  {
+    "Text": "list SLC team",
+    "Label": "FILTER_BY_LOCATION"
+  },
+  {
+    "Text": "do you know jerry smith's mobile",
+    "Label": "GET_CONTACT_PHONE"
+  },
+  {
+    "Text": "who has birthday next month?",
+    "Label": "FILTER_BY_BIRTHDAY"
+  },
+  {
+    "Text": "anyone joined before 2021?",
+    "Label": "FILTER_BY_HIRE_DATE"
+  },
+  {
+    "Text": "who started prior to 2020",
+    "Label": "FILTER_BY_HIRE_DATE"
+  },
+  {
+    "Text": "find directors",
+    "Label": "FILTER_BY_ROLE"
+  },
+  {
+    "Text": "list junior directors",
+    "Label": "FILTER_BY_ROLE"
+  },
+  {
+    "Text": "best number for Mr Loki",
+    "Label": "GET_CONTACT_PHONE"
+  },
+  {
+    "Text": "what is jordan information",
+    "Label": "GET_CONTACT_INFO"
+  },
+  {
+    "Text": "show managers in any department",
+    "Label": "FILTER_BY_ROLE"
+  },
+  {
+    "Text": "phone for MR. LOKI",
+    "Label": "GET_CONTACT_PHONE"
+  },
+  {
+    "Text": "show me managers in hr",
+    "Label": "FILTER_BY_ROLE"
+  },
+  {
+    "Text": "where is TAYLOR BROWN located (address)",
+    "Label": "GET_CONTACT_ADDRESS"
+  },
+  {
+    "Text": "filter by location: New York",
+    "Label": "FILTER_BY_LOCATION"
+  },
+  {
+    "Text": "how to send mail to anna-marie o'neil",
+    "Label": "GET_CONTACT_ADDRESS"
+  },
+  {
+    "Text": "who’s on the eng team",
+    "Label": "FILTER_BY_DEPARTMENT"
+  },
+  {
+    "Text": "who’s on the finance team",
+    "Label": "FILTER_BY_DEPARTMENT"
+  },
+  {
+    "Text": "phone for morgan",
+    "Label": "GET_CONTACT_PHONE"
+  },
+  {
+    "Text": "give me li wei's direct line",
+    "Label": "GET_CONTACT_PHONE"
+  },
+  {
+    "Text": "the lowdown on Rick",
+    "Label": "GET_CONTACT_INFO"
+  },
+  {
+    "Text": "cell for tony the great",
+    "Label": "GET_CONTACT_PHONE"
+  },
+  {
+    "Text": "how best to reach john the 3rd",
+    "Label": "GET_CONTACT_INFO"
+  },
+  {
+    "Text": "who’s on the hr team",
+    "Label": "FILTER_BY_DEPARTMENT"
+  },
+  {
+    "Text": "how to send mail to John the III",
+    "Label": "GET_CONTACT_ADDRESS"
+  },
+  {
+    "Text": "based in Austin only",
+    "Label": "FILTER_BY_LOCATION"
+  },
+  {
+    "Text": "mailing address for taylor",
+    "Label": "GET_CONTACT_ADDRESS"
+  },
+  {
+    "Text": "filter by location: Berlin",
+    "Label": "FILTER_BY_LOCATION"
+  },
+  {
+    "Text": "the lowdown on mr.",
+    "Label": "GET_CONTACT_INFO"
+  },
+  {
+    "Text": "adress for Morgan Lee",
+    "Label": "GET_CONTACT_ADDRESS"
+  },
+  {
+    "Text": "whose birthday is birthday on 1990-07-15",
+    "Label": "FILTER_BY_BIRTHDAY"
+  },
+  {
+    "Text": "get me O'BRIEN's address",
+    "Label": "GET_CONTACT_ADDRESS"
+  },
+  {
+    "Text": "filter by DOB after 1990",
+    "Label": "FILTER_BY_BIRTHDAY"
+  },
+  {
+    "Text": "show me casey's email address",
+    "Label": "GET_CONTACT_EMAIL"
+  },
+  {
+    "Text": "any senior engineers?",
+    "Label": "FILTER_BY_ROLE"
+  },
+  {
+    "Text": "remote employees only",
+    "Label": "FILTER_BY_LOCATION"
+  },
+  {
+    "Text": "how best to reach sam patel",
+    "Label": "GET_CONTACT_INFO"
+  },
+  {
+    "Text": "get me LI's address",
+    "Label": "GET_CONTACT_ADDRESS"
+  },
+  {
+    "Text": "emails for Rick and ALEX JOHNSON",
+    "Label": "GET_CONTACT_EMAIL"
+  },
+  {
+    "Text": "who works out of Tokyo",
+    "Label": "FILTER_BY_LOCATION"
+  },
+  {
+    "Text": "how do I email beth smith?",
+    "Label": "GET_CONTACT_EMAIL"
+  },
+  {
+    "Text": "filter by birthdays in May",
+    "Label": "FILTER_BY_BIRTHDAY"
+  },
+  {
+    "Text": "what’s ANNA-MARIE's phone number",
+    "Label": "GET_CONTACT_PHONE"
+  },
+  {
+    "Text": "filter by location: SLC",
+    "Label": "FILTER_BY_LOCATION"
+  },
+  {
+    "Text": "what’s BIRD's phone number",
+    "Label": "GET_CONTACT_PHONE"
+  },
+  {
+    "Text": "how best to reach ALEX",
+    "Label": "GET_CONTACT_INFO"
+  },
+  {
+    "Text": "show employees with start date between 2019 and 2022",
+    "Label": "FILTER_BY_HIRE_DATE"
+  },
+  {
+    "Text": "contact for morty",
+    "Label": "GET_CONTACT_INFO"
+  },
+  {
+    "Text": "what is Tony The Great's email?",
+    "Label": "GET_CONTACT_EMAIL"
+  },
+  {
+    "Text": "show eng department",
+    "Label": "FILTER_BY_DEPARTMENT"
+  },
+  {
+    "Text": "show directors in any department",
+    "Label": "FILTER_BY_ROLE"
+  },
+  {
+    "Text": "mailing address for Alex",
+    "Label": "GET_CONTACT_ADDRESS"
+  },
+  {
+    "Text": "adress for ALEX",
+    "Label": "GET_CONTACT_ADDRESS"
+  },
+  {
+    "Text": "who’s on the support team",
+    "Label": "FILTER_BY_DEPARTMENT"
+  },
+  {
+    "Text": "all contact info for morty smith",
+    "Label": "GET_CONTACT_INFO"
+  },
+  {
+    "Text": "folks who started before 01/01/2024",
+    "Label": "FILTER_BY_HIRE_DATE"
+  },
+  {
+    "Text": "email for MR.",
+    "Label": "GET_CONTACT_EMAIL"
+  },
+  {
+    "Text": "the lowdown on Rick",
+    "Label": "GET_CONTACT_INFO"
+  },
+  {
+    "Text": "list people in eng",
+    "Label": "FILTER_BY_DEPARTMENT"
+  },
+  {
+    "Text": "do you know O'Brien's mobile",
+    "Label": "GET_CONTACT_PHONE"
+  },
+  {
+    "Text": "who’s in Salt Lake City",
+    "Label": "FILTER_BY_LOCATION"
+  },
+  {
+    "Text": "upcoming born in July",
+    "Label": "FILTER_BY_BIRTHDAY"
+  },
+  {
+    "Text": "list pms",
+    "Label": "FILTER_BY_ROLE"
+  },
+  {
+    "Text": "show employees with start date prior to 2020",
+    "Label": "FILTER_BY_HIRE_DATE"
+  },
+  {
+    "Text": "people hired since Jan 2023 in product",
+    "Label": "FILTER_BY_HIRE_DATE"
+  },
+  {
+    "Text": "any designers in SLC?",
+    "Label": "FILTER_BY_ROLE"
+  },
+  {
+    "Text": "the lowdown on Casey Davis",
+    "Label": "GET_CONTACT_INFO"
+  },
+  {
+    "Text": "remote employees only",
+    "Label": "FILTER_BY_LOCATION"
+  },
+  {
+    "Text": "where does bird sit",
+    "Label": "GET_CONTACT_ADDRESS"
+  },
+  {
+    "Text": "anyone joined after January 1, 2023?",
+    "Label": "FILTER_BY_HIRE_DATE"
+  },
+  {
+    "Text": "any remote employees?",
+    "Label": "FILTER_BY_LOCATION"
+  },
+  {
+    "Text": "headcount for support",
+    "Label": "FILTER_BY_DEPARTMENT"
+  },
+  {
+    "Text": "office location of li wei",
+    "Label": "GET_CONTACT_ADDRESS"
+  },
+  {
+    "Text": "give me maría's direct line",
+    "Label": "GET_CONTACT_PHONE"
+  },
+  {
+    "Text": "the lowdown on Morty Smith",
+    "Label": "GET_CONTACT_INFO"
+  },
+  {
+    "Text": "how do I email Rick?",
+    "Label": "GET_CONTACT_EMAIL"
+  },
+  {
+    "Text": "tenure before 2021",
+    "Label": "FILTER_BY_HIRE_DATE"
+  },
+  {
+    "Text": "how to send mail to MORGAN",
+    "Label": "GET_CONTACT_ADDRESS"
+  },
+  {
+    "Text": "show me O'Brien's email address",
+    "Label": "GET_CONTACT_EMAIL"
+  },
+  {
+    "Text": "what’s tony's phone number",
+    "Label": "GET_CONTACT_PHONE"
+  },
+  {
+    "Text": "what is María García's email?",
+    "Label": "GET_CONTACT_EMAIL"
+  },
+  {
+    "Text": "what’s jerry smith's details",
+    "Label": "GET_CONTACT_INFO"
+  },
+  {
+    "Text": "what is Casey's email?",
+    "Label": "GET_CONTACT_EMAIL"
+  },
+  {
+    "Text": "people working in design",
+    "Label": "FILTER_BY_DEPARTMENT"
+  },
+  {
+    "Text": "best number for Morty Smith",
+    "Label": "GET_CONTACT_PHONE"
+  },
+  {
+    "Text": "give me Taylor Brown's contact info",
+    "Label": "GET_CONTACT_INFO"
+  },
+  {
+    "Text": "whose birthday is turning 30 this year",
+    "Label": "FILTER_BY_BIRTHDAY"
+  },
+  {
+    "Text": "show me o'brien's email address",
+    "Label": "GET_CONTACT_EMAIL"
+  },
+  {
+    "Text": "get me Jordan's work email",
+    "Label": "GET_CONTACT_EMAIL"
+  },
+  {
+    "Text": "get me sam patel's address",
+    "Label": "GET_CONTACT_ADDRESS"
+  },
+  {
+    "Text": "who started after 2020",
+    "Label": "FILTER_BY_HIRE_DATE"
+  },
+  {
+    "Text": "show me Mister Loki's email address",
+    "Label": "GET_CONTACT_EMAIL"
+  },
+  {
+    "Text": "email for Anna Marie O'Neil",
+    "Label": "GET_CONTACT_EMAIL"
+  },
+  {
+    "Text": "any vps?",
+    "Label": "FILTER_BY_ROLE"
+  },
+  {
+    "Text": "show me jerry smith's email address",
+    "Label": "GET_CONTACT_EMAIL"
+  },
+  {
+    "Text": "what is MR. LOKI information",
+    "Label": "GET_CONTACT_INFO"
+  },
+  {
+    "Text": "whose birthday is date of birth before 2000",
+    "Label": "FILTER_BY_BIRTHDAY"
+  },
+  {
+    "Text": "contact details for john",
+    "Label": "GET_CONTACT_INFO"
+  },
+  {
+    "Text": "based in Salt Lake City only",
+    "Label": "FILTER_BY_LOCATION"
+  },
+  {
+    "Text": "find turning 30 this year",
+    "Label": "FILTER_BY_BIRTHDAY"
+  },
+  {
+    "Text": "any remote employees?",
+    "Label": "FILTER_BY_LOCATION"
+  },
+  {
+    "Text": "find qas",
+    "Label": "FILTER_BY_ROLE"
+  },
+  {
+    "Text": "mailing address for CASEY",
+    "Label": "GET_CONTACT_ADDRESS"
+  },
+  {
+    "Text": "folks who started before 2021",
+    "Label": "FILTER_BY_HIRE_DATE"
+  },
+  {
+    "Text": "hire date between 2019 and 2022",
+    "Label": "FILTER_BY_HIRE_DATE"
+  },
+  {
+    "Text": "what is TONY THE GREAT information",
+    "Label": "GET_CONTACT_INFO"
+  },
+  {
+    "Text": "need the email of María García",
+    "Label": "GET_CONTACT_EMAIL"
+  },
+  {
+    "Text": "where does MARÍA GARCÍA sit",
+    "Label": "GET_CONTACT_ADDRESS"
+  },
+  {
+    "Text": "any managers?",
+    "Label": "FILTER_BY_ROLE"
+  },
+  {
+    "Text": "cell for Bird",
+    "Label": "GET_CONTACT_PHONE"
+  },
+  {
+    "Text": "any pms?",
+    "Label": "FILTER_BY_ROLE"
+  },
+  {
+    "Text": "email for Summer Smith",
+    "Label": "GET_CONTACT_EMAIL"
+  },
+  {
+    "Text": "show people in the Austin office",
+    "Label": "FILTER_BY_LOCATION"
+  },
+  {
+    "Text": "remote employees only",
+    "Label": "FILTER_BY_LOCATION"
+  },
+  {
+    "Text": "anyone near New York",
+    "Label": "FILTER_BY_LOCATION"
+  },
+  {
+    "Text": "anyone joined from 2020 to 2021?",
+    "Label": "FILTER_BY_HIRE_DATE"
+  },
+  {
+    "Text": "emails for li wei, Tony, and Rick",
+    "Label": "GET_CONTACT_EMAIL"
+  },
+  {
+    "Text": "finance team members",
+    "Label": "FILTER_BY_DEPARTMENT"
+  },
+  {
+    "Text": "filter by location: Tokyo",
+    "Label": "FILTER_BY_LOCATION"
+  },
+  {
+    "Text": "phone for John III",
+    "Label": "GET_CONTACT_PHONE"
+  },
+  {
+    "Text": "any engineers in Berlin?",
+    "Label": "FILTER_BY_ROLE"
+  },
+  {
+    "Text": "what is mr. loki's office address",
+    "Label": "GET_CONTACT_ADDRESS"
+  },
+  {
+    "Text": "any vps?",
+    "Label": "FILTER_BY_ROLE"
+  },
+  {
+    "Text": "show hires before 01/01/2024",
+    "Label": "FILTER_BY_HIRE_DATE"
+  },
+  {
+    "Text": "upcoming turning 30 this year",
+    "Label": "FILTER_BY_BIRTHDAY"
+  },
+  {
+    "Text": "show me Taylor Brown's email address",
+    "Label": "GET_CONTACT_EMAIL"
+  },
+  {
+    "Text": "list employees with birthday on 5/10",
+    "Label": "FILTER_BY_BIRTHDAY"
+  },
+  {
+    "Text": "search pms",
+    "Label": "FILTER_BY_ROLE"
+  },
+  {
+    "Text": "contact details for Li Wei",
+    "Label": "GET_CONTACT_INFO"
+  },
+  {
+    "Text": "I need people with birthdays this week",
+    "Label": "FILTER_BY_BIRTHDAY"
+  },
+  {
+    "Text": "headcount for finance",
+    "Label": "FILTER_BY_DEPARTMENT"
+  },
+  {
+    "Text": "where does Jean Luc Picard sit",
+    "Label": "GET_CONTACT_ADDRESS"
+  },
+  {
+    "Text": "list New York team",
+    "Label": "FILTER_BY_LOCATION"
+  },
+  {
+    "Text": "list people in human resources",
+    "Label": "FILTER_BY_DEPARTMENT"
+  },
+  {
+    "Text": "headcount for marketing",
+    "Label": "FILTER_BY_DEPARTMENT"
+  },
+  {
+    "Text": "who are the qas?",
+    "Label": "FILTER_BY_ROLE"
+  },
+  {
+    "Text": "show employees with start date before 2021",
+    "Label": "FILTER_BY_HIRE_DATE"
+  },
+  {
+    "Text": "contact for BIRD",
+    "Label": "GET_CONTACT_INFO"
+  },
+  {
+    "Text": "show employees with start date in 2021",
+    "Label": "FILTER_BY_HIRE_DATE"
+  },
+  {
+    "Text": "show me Jerry's email address",
+    "Label": "GET_CONTACT_EMAIL"
+  }
+]
