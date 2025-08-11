@@ -46,3 +46,7 @@ Archived files that may be referenced but aren't actively used.
 1. Enhance the console application in `/projects/QueryUnderstanding/`
 2. Add API endpoints for testing with Postman
 3. Implement the trained ML.NET model in the console project
+
+## Watch
+
+dotnet watch run --project /Users/maneki-neko/learning/projects/MLIntentClassifierAPI/MLIntentClassifierAPI.csproj

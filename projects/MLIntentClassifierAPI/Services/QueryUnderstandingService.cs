@@ -36,10 +36,42 @@ public class QueryUnderstandingService
     public QueryUnderstanding Understand(string text)
     {
         var intent = PredictIntent(text);
-        var slots = ExtractSlots(text, _domain);
+        // Get all employees from the orchestrator
+        var allEmployees = EmployeeQueryOrchestrator.GetAllEmployeeNames();
+        // Build fuzzy list from all employee names
+        var foundNames = ExtractNamesFromQuery(text, allEmployees);
+        Console.WriteLine($"Matched names: {string.Join(", ", foundNames)} for query: {text}");
+        // Build slots after filtering names
+        var slots = ExtractSlots(text, _domain, foundNames);
         return new QueryUnderstanding { Intent = intent, Slots = slots };
     }
-    
+
+    private static List<string> ExtractNamesFromQuery(string text, List<string> employeeNames)
+    {
+        var tokens = text.Split(new[]{' ', ',', ';'}, StringSplitOptions.RemoveEmptyEntries)
+            .Select(t => t.Trim(new[]{'.','?','!'}))
+            .Select(t => t.EndsWith("'s", StringComparison.OrdinalIgnoreCase) ? t[..^2] : t)
+            .Where(t => t.Length > 1).ToList();
+        var uniqueTokens = tokens.Distinct(StringComparer.OrdinalIgnoreCase).ToList();
+        var matchedNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        // Try all two-word combinations for full name matching
+        for (int i = 0; i < uniqueTokens.Count - 1; i++)
+        {
+            var candidate = uniqueTokens[i] + " " + uniqueTokens[i + 1];
+            var best = Process.ExtractOne(candidate, employeeNames);
+            if (best != null && best.Score >= 88)
+                matchedNames.Add(best.Value);
+        }
+        // Fallback: single token match only if it is a unique substring among employees (no fuzzy)
+        foreach (var token in uniqueTokens)
+        {
+            var matches = employeeNames.Where(n => n.IndexOf(token, StringComparison.OrdinalIgnoreCase) >= 0).ToList();
+            if (matches.Count == 1)
+                matchedNames.Add(matches[0]);
+        }
+        return matchedNames.ToList();
+    }
+
     private Intent PredictIntent(string text)
     {
         if (_engine is not null)
@@ -65,7 +97,7 @@ public class QueryUnderstandingService
         return Intent.UNKNOWN;
     }
     
-    private QuerySlots ExtractSlots(string text, DomainDictionaries domain)
+    private QuerySlots ExtractSlots(string text, DomainDictionaries domain, List<string> foundNames)
     {
         text = Normalize(text);
         var slots = new QuerySlots();
@@ -116,18 +148,8 @@ public class QueryUnderstandingService
             }
         }
 
-        // Names (fuzzy to known employees). Keep top hits that meet a threshold.
-        var tokens = text.Split(new[]{' ', ',', ';'}, StringSplitOptions.RemoveEmptyEntries);
-        var uniqueTokens = tokens.Select(t => t.Trim(new[]{'.','?','!'})).Where(t => t.Length > 1).Distinct(StringComparer.OrdinalIgnoreCase);
-        foreach (var token in uniqueTokens)
-        {
-            var best = Process.ExtractOne(token, domain.EmployeeNames);
-            if (best != null && best.Score >= 88) // threshold
-            {
-                if (!slots.Names.Contains(best.Value))
-                    slots.Names.Add(best.Value);
-            }
-        }
+        // Use found names
+        slots.Names = foundNames;
 
         return slots;
     }
@@ -217,7 +239,7 @@ public class QueryUnderstandingService
         // Known names (optional, for fuzzy)
         domain.EmployeeNames.AddRange(new [] {
             "Rick Sanchez","Summer Smith","Morty Smith","Beth Smith","Jerry Smith",
-            "Alice Johnson","Bob Lee","Carol Danvers","Tony Stark","Bruce Wayne"
+            "Alice Johnson","Bob Lee","Carol Danvers","Tony Stark","Bruce Wayne","Bird Person"
         });
         
         return domain;
