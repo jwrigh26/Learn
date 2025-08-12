@@ -37,7 +37,9 @@ public class QueryController : ControllerBase
                     id = (int)understanding.Intent,
                     label = understanding.Intent.ToString()
                 },
-                slots = understanding.Slots
+                slots = understanding.Slots,
+                employees = understanding.Employees,
+                filteredEmployees = understanding.FilteredEmployees
             };
             return Ok(result);
         }

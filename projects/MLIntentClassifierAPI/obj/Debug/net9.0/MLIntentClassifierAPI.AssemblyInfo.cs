@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MLIntentClassifierAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9ac3be896f1c3a9fa44be26146273ea3f354f4b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9027ea964d964724f3cdce4d9d5ef0a2932c964")]
 [assembly: System.Reflection.AssemblyProductAttribute("MLIntentClassifierAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MLIntentClassifierAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

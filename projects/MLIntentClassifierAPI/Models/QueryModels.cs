@@ -1,3 +1,4 @@
+using MLIntentClassifierAPI.Services;
 namespace MLIntentClassifierAPI.Models;
 
 public sealed class QuerySlots
@@ -12,10 +13,13 @@ public sealed class QuerySlots
     public List<string> Names { get; set; } = new();  // resolved employee display names
 }
 
+
 public sealed class QueryUnderstanding
 {
     public Intent Intent { get; set; }
     public QuerySlots Slots { get; set; } = new();
+    public List<Employee> Employees { get; set; } = new();
+    public List<Employee> FilteredEmployees { get; set; } = new();
 }
 
 public sealed class QueryRecord 

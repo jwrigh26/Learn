@@ -36,14 +36,27 @@ public class QueryUnderstandingService
     public QueryUnderstanding Understand(string text)
     {
         var intent = PredictIntent(text);
-        // Get all employees from the orchestrator
-        var allEmployees = EmployeeQueryOrchestrator.GetAllEmployeeNames();
+        // Get all employees as objects
+        var allEmployeeObjects = typeof(EmployeeQueryOrchestrator)
+            .GetField("Employees", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static)
+            ?.GetValue(null) as List<Employee> ?? new List<Employee>();
+        var allEmployeeNames = allEmployeeObjects.Select(e => e.Name).ToList();
         // Build fuzzy list from all employee names
-        var foundNames = ExtractNamesFromQuery(text, allEmployees);
+        var foundNames = ExtractNamesFromQuery(text, allEmployeeNames);
         Console.WriteLine($"Matched names: {string.Join(", ", foundNames)} for query: {text}");
         // Build slots after filtering names
         var slots = ExtractSlots(text, _domain, foundNames);
-        return new QueryUnderstanding { Intent = intent, Slots = slots };
+
+        // filteredEmployees is the list of Employee objects whose names were matched
+        var filteredEmployees = allEmployeeObjects
+            .Where(e => foundNames.Contains(e.Name, StringComparer.OrdinalIgnoreCase))
+            .ToList();
+
+        return new QueryUnderstanding {
+            Intent = intent,
+            Slots = slots,
+            Employees = filteredEmployees,
+        };
     }
 
     private static List<string> ExtractNamesFromQuery(string text, List<string> employeeNames)
