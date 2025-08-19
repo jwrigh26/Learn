@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/maneki-neko/learn/projects/MLIntentClassifierAPI/MLIntentClassifierAPI.csproj": {}
+    "/Users/maneki-neko/learn/projects/ModelTrainer/ModelTrainer.csproj": {}
   },
   "projects": {
-    "/Users/maneki-neko/learn/projects/MLIntentClassifierAPI/MLIntentClassifierAPI.csproj": {
+    "/Users/maneki-neko/learn/projects/ModelTrainer/ModelTrainer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/maneki-neko/learn/projects/MLIntentClassifierAPI/MLIntentClassifierAPI.csproj",
-        "projectName": "MLIntentClassifierAPI",
-        "projectPath": "/Users/maneki-neko/learn/projects/MLIntentClassifierAPI/MLIntentClassifierAPI.csproj",
+        "projectUniqueName": "/Users/maneki-neko/learn/projects/ModelTrainer/ModelTrainer.csproj",
+        "projectName": "ModelTrainer",
+        "projectPath": "/Users/maneki-neko/learn/projects/ModelTrainer/ModelTrainer.csproj",
         "packagesPath": "/Users/maneki-neko/.nuget/packages/",
-        "outputPath": "/Users/maneki-neko/learn/projects/MLIntentClassifierAPI/obj/",
+        "outputPath": "/Users/maneki-neko/learn/projects/ModelTrainer/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/maneki-neko/.nuget/NuGet/NuGet.Config"
@@ -44,21 +44,21 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
-            "FuzzySharp": {
-              "target": "Package",
-              "version": "[2.0.2, )"
-            },
-            "Microsoft.AspNetCore.OpenApi": {
-              "target": "Package",
-              "version": "[9.0.8, )"
-            },
             "Microsoft.ML": {
               "target": "Package",
               "version": "[4.0.2, )"
             },
-            "Microsoft.Recognizers.Text.DateTime": {
+            "Microsoft.ML.FastTree": {
               "target": "Package",
-              "version": "[1.8.13, )"
+              "version": "[4.0.2, )"
+            },
+            "Microsoft.ML.LightGbm": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[9.0.0, )"
             }
           },
           "imports": [
@@ -73,9 +73,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

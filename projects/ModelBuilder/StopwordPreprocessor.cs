@@ -15,8 +15,8 @@ namespace ModelBuilder.Preprocessing
         private static readonly Regex Tokenizer = new Regex(@"[A-Za-z0-9]+'[A-Za-z0-9]+|[A-Za-z0-9]+",
             RegexOptions.Compiled);
 
-        // Possessive 's remover (jim's -> jim)
-        private static readonly Regex Possessive = new Regex(@"^(.+?)'?s$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        // Possessive 's remover (jim's -> jim, but NOT address -> addre)
+        private static readonly Regex Possessive = new Regex(@"^(.+)'s$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         // Temporal operator / comparison patterns that must be preserved
         private static readonly HashSet<string> TemporalOps = new HashSet<string>(new[]

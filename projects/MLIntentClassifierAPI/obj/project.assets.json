@@ -1299,11 +1299,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/maneki-neko/learning/projects/MLIntentClassifierAPI/MLIntentClassifierAPI.csproj",
+      "projectUniqueName": "/Users/maneki-neko/learn/projects/MLIntentClassifierAPI/MLIntentClassifierAPI.csproj",
       "projectName": "MLIntentClassifierAPI",
-      "projectPath": "/Users/maneki-neko/learning/projects/MLIntentClassifierAPI/MLIntentClassifierAPI.csproj",
+      "projectPath": "/Users/maneki-neko/learn/projects/MLIntentClassifierAPI/MLIntentClassifierAPI.csproj",
       "packagesPath": "/Users/maneki-neko/.nuget/packages/",
-      "outputPath": "/Users/maneki-neko/learning/projects/MLIntentClassifierAPI/obj/",
+      "outputPath": "/Users/maneki-neko/learn/projects/MLIntentClassifierAPI/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/maneki-neko/.nuget/NuGet/NuGet.Config"
