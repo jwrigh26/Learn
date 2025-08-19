@@ -1,0 +1,55 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "projects", "projects", "{17245595-230B-9055-A944-863F0DDDA8E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "archive", "archive", "{51D3FFFF-5534-FA11-DF10-1E59F2D397C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelBuilder", "projects\ModelBuilder\ModelBuilder.csproj", "{3EDC908B-6A45-9416-1D0A-2B3BA03D6F2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelTrainer", "projects\ModelTrainer\ModelTrainer.csproj", "{14AA2B3B-6023-00A0-A418-52E089F44F93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLIntentClassifierAPI", "projects\MLIntentClassifierAPI\MLIntentClassifierAPI.csproj", "{653867DC-7A43-0429-8818-93AEFB587690}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nlp_rag_design", "nlp_rag_design", "{79D690D3-3EEB-8530-CA28-ACEA6CAF4C09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "qus_console", "archive\nlp_rag_design\qus_console\qus_console.csproj", "{9CA6A160-4173-3554-E9DC-53A2F0850BBF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EDC908B-6A45-9416-1D0A-2B3BA03D6F2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EDC908B-6A45-9416-1D0A-2B3BA03D6F2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EDC908B-6A45-9416-1D0A-2B3BA03D6F2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EDC908B-6A45-9416-1D0A-2B3BA03D6F2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14AA2B3B-6023-00A0-A418-52E089F44F93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14AA2B3B-6023-00A0-A418-52E089F44F93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14AA2B3B-6023-00A0-A418-52E089F44F93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14AA2B3B-6023-00A0-A418-52E089F44F93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{653867DC-7A43-0429-8818-93AEFB587690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{653867DC-7A43-0429-8818-93AEFB587690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{653867DC-7A43-0429-8818-93AEFB587690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{653867DC-7A43-0429-8818-93AEFB587690}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CA6A160-4173-3554-E9DC-53A2F0850BBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CA6A160-4173-3554-E9DC-53A2F0850BBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CA6A160-4173-3554-E9DC-53A2F0850BBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CA6A160-4173-3554-E9DC-53A2F0850BBF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3EDC908B-6A45-9416-1D0A-2B3BA03D6F2A} = {17245595-230B-9055-A944-863F0DDDA8E8}
+		{14AA2B3B-6023-00A0-A418-52E089F44F93} = {17245595-230B-9055-A944-863F0DDDA8E8}
+		{653867DC-7A43-0429-8818-93AEFB587690} = {17245595-230B-9055-A944-863F0DDDA8E8}
+		{79D690D3-3EEB-8530-CA28-ACEA6CAF4C09} = {51D3FFFF-5534-FA11-DF10-1E59F2D397C6}
+		{9CA6A160-4173-3554-E9DC-53A2F0850BBF} = {79D690D3-3EEB-8530-CA28-ACEA6CAF4C09}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D86CA89A-FACE-4AEB-BD4A-FE4C91838522}
+	EndGlobalSection
+EndGlobal

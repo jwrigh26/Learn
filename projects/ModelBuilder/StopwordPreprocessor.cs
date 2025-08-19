@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace QueryUnderstanding.Preprocessing
+namespace ModelBuilder.Preprocessing
 {
     /// <summary>
     /// Lightweight text normalization + stopword removal tuned for intent classification + slot filling.
