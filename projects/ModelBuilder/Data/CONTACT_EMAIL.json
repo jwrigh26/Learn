@@ -4,8 +4,48 @@
     "Label": "CONTACT_EMAIL"
   },
   {
-    "Text": "Morty's email",
-    "Label": "CONTACT_EMAIL"
+    "Text": "Show me who has a .edu email address",
+    "Label":"CONTACT_EMAIL"
+  },
+  {
+    "Text": "Get me Summer's emergency contact email",
+    "Label":"CONTACT_EMAIL"
+  },
+  {
+    "Text": "Which email addresses are marked as inactive",
+    "Label":"CONTACT_EMAIL"
+  },
+  {
+    "Text": "Find employees using Yahoo email services",
+    "Label":"CONTACT_EMAIL"
+  },
+  {
+    "Text": "What's Rick's email signature line",
+    "Label":"CONTACT_EMAIL"
+  },
+  {
+    "Text": "Show me all department head email addresses",
+    "Label":"CONTACT_EMAIL"
+  },
+  {
+    "Text": "I need Morty's external email for vendors",
+    "Label":"CONTACT_EMAIL"
+  },
+  {
+    "Text": "Find duplicate email addresses in our system",
+    "Label":"CONTACT_EMAIL"
+  },
+  {
+    "Text": "Which employees need email setup assistance",
+    "Label":"CONTACT_EMAIL"
+  },
+  {
+    "Text": "Show me email addresses that bounce back",
+    "Label":"CONTACT_EMAIL"
+  },
+  {
+    "Text": "What's the shared email for customer service",
+    "Label":"CONTACT_EMAIL"
   },
   {
     "Text": "Send me Summer's email and Morty's too",
@@ -32,87 +72,71 @@
     "Label":"CONTACT_EMAIL"
   },
   {
-    "Text": "",
+    "Text": "Find Jerry's work email address",
     "Label":"CONTACT_EMAIL"
   },
   {
-    "Text": "",
+    "Text": "What's Beth's personal email",
     "Label":"CONTACT_EMAIL"
   },
   {
-    "Text": "",
+    "Text": "Show me Summer's corporate email",
     "Label":"CONTACT_EMAIL"
   },
   {
-    "Text": "",
+    "Text": "I need Morty's business email address",
     "Label":"CONTACT_EMAIL"
   },
   {
-    "Text": "",
+    "Text": "Get me Rick's primary email contact",
     "Label":"CONTACT_EMAIL"
   },
   {
-    "Text": "",
+    "Text": "What's Tim's email domain",
     "Label":"CONTACT_EMAIL"
   },
   {
-    "Text": "",
+    "Text": "Find all employees with gmail addresses",
     "Label":"CONTACT_EMAIL"
   },
   {
-    "Text": "",
+    "Text": "Show me who uses company email domains",
     "Label":"CONTACT_EMAIL"
   },
   {
-    "Text": "",
+    "Text": "Which email addresses contain the name Sarah",
     "Label":"CONTACT_EMAIL"
   },
   {
-    "Text": "",
+    "Text": "I need email addresses for the marketing team",
     "Label":"CONTACT_EMAIL"
   },
   {
-    "Text": "",
+    "Text": "What's the email format for new employees",
     "Label":"CONTACT_EMAIL"
   },
   {
-    "Text": "",
+    "Text": "Find email addresses ending with .org",
     "Label":"CONTACT_EMAIL"
   },
   {
-    "Text": "",
+    "Text": "Show me Jerry's alternate email address",
     "Label":"CONTACT_EMAIL"
   },
   {
-    "Text": "",
+    "Text": "Which employees have multiple email accounts",
     "Label":"CONTACT_EMAIL"
   },
   {
-    "Text": "",
+    "Text": "I need the distribution list email for HR",
     "Label":"CONTACT_EMAIL"
   },
   {
-    "Text": "",
+    "Text": "What's Beth's email username without the domain",
     "Label":"CONTACT_EMAIL"
   },
   {
-    "Text": "",
-    "Label":"CONTACT_EMAIL"
-  },
-  {
-    "Text": "",
-    "Label":"CONTACT_EMAIL"
-  },
-  {
-    "Text": "",
-    "Label":"CONTACT_EMAIL"
-  },
-  {
-    "Text": "",
-    "Label":"CONTACT_EMAIL"
-  },
-  {
-    "Text": "",
+    "Text": "Find all email addresses with numbers in them",
     "Label":"CONTACT_EMAIL"
   }
 ]

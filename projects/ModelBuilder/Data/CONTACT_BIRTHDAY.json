@@ -4,8 +4,48 @@
     "Label": "CONTACT_BIRTHDAY"
   },
   {
-    "Text": "who was born in 2000",
-    "Label": "CONTACT_BIRTHDAY"
+    "Text": "Show me birthdays in the first quarter",
+    "Label":"CONTACT_BIRTHDAY"
+  },
+  {
+    "Text": "Who has a birthday party coming up",
+    "Label":"CONTACT_BIRTHDAY"
+  },
+  {
+    "Text": "Find employees born in the 1990s",
+    "Label":"CONTACT_BIRTHDAY"
+  },
+  {
+    "Text": "Show me the youngest team member's birth date",
+    "Label":"CONTACT_BIRTHDAY"
+  },
+  {
+    "Text": "Which employees were born on a Friday",
+    "Label":"CONTACT_BIRTHDAY"
+  },
+  {
+    "Text": "Find birthdays that fall during work hours",
+    "Label":"CONTACT_BIRTHDAY"
+  },
+  {
+    "Text": "Show me who needs birthday cake this month",
+    "Label":"CONTACT_BIRTHDAY"
+  },
+  {
+    "Text": "Find employees with summer birthdays",
+    "Label":"CONTACT_BIRTHDAY"
+  },
+  {
+    "Text": "What's Sarah's zodiac sign based on birth date",
+    "Label":"CONTACT_BIRTHDAY"
+  },
+  {
+    "Text": "Show me all November babies in the office",
+    "Label":"CONTACT_BIRTHDAY"
+  },
+  {
+    "Text": "Find who celebrates their birthday during holidays",
+    "Label":"CONTACT_BIRTHDAY"
   },
   {
     "Text": "people born in 1985",
@@ -32,87 +72,75 @@
     "Label":"CONTACT_BIRTHDAY"
   },
   {
-    "Text": "",
-    "Label":"CONTACT_HIRE_DATE"
+    "Text": "What's Rick's birth date",
+    "Label":"CONTACT_BIRTHDAY"
   },
   {
-    "Text": "",
-    "Label":"CONTACT_HIRE_DATE"
+    "Text": "When is Summer's birthday",
+    "Label":"CONTACT_BIRTHDAY"
   },
   {
-    "Text": "",
-    "Label":"CONTACT_HIRE_DATE"
+    "Text": "Show me Morty's date of birth",
+    "Label":"CONTACT_BIRTHDAY"
   },
   {
-    "Text": "",
-    "Label":"CONTACT_HIRE_DATE"
+    "Text": "Find Jerry's birthday month",
+    "Label":"CONTACT_BIRTHDAY"
   },
   {
-    "Text": "",
-    "Label":"CONTACT_HIRE_DATE"
+    "Text": "What day was Beth born",
+    "Label":"CONTACT_BIRTHDAY"
   },
   {
-    "Text": "",
-    "Label":"CONTACT_HIRE_DATE"
+    "Text": "Show me employees born in December",
+    "Label":"CONTACT_BIRTHDAY"
   },
   {
-    "Text": "",
-    "Label":"CONTACT_HIRE_DATE"
+    "Text": "Who celebrates their birthday in August",
+    "Label":"CONTACT_BIRTHDAY"
   },
   {
-    "Text": "",
-    "Label":"CONTACT_HIRE_DATE"
+    "Text": "Find all birthdays happening this week",
+    "Label":"CONTACT_BIRTHDAY"
   },
   {
-    "Text": "",
-    "Label":"CONTACT_HIRE_DATE"
+    "Text": "Show me who turns 30 this year",
+    "Label":"CONTACT_BIRTHDAY"
   },
   {
-    "Text": "",
-    "Label":"CONTACT_HIRE_DATE"
+    "Text": "Which employees have birthdays on weekends",
+    "Label":"CONTACT_BIRTHDAY"
   },
   {
-    "Text": "",
-    "Label":"CONTACT_HIRE_DATE"
+    "Text": "Find people born on leap day",
+    "Label":"CONTACT_BIRTHDAY"
   },
   {
-    "Text": "",
-    "Label":"CONTACT_HIRE_DATE"
+    "Text": "Show me the oldest employee by birth year",
+    "Label":"CONTACT_BIRTHDAY"
   },
   {
-    "Text": "",
-    "Label":"CONTACT_HIRE_DATE"
+    "Text": "Who was born in the same month as Tim",
+    "Label":"CONTACT_BIRTHDAY"
   },
   {
-    "Text": "",
-    "Label":"CONTACT_HIRE_DATE"
+    "Text": "Find employees with birthdays on holidays",
+    "Label":"CONTACT_BIRTHDAY"
   },
   {
-    "Text": "",
-    "Label":"CONTACT_HIRE_DATE"
+    "Text": "Show me who shares the same birthday",
+    "Label":"CONTACT_BIRTHDAY"
   },
   {
-    "Text": "",
-    "Label":"CONTACT_HIRE_DATE"
+    "Text": "What's the most common birth month in our company",
+    "Label":"CONTACT_BIRTHDAY"
   },
   {
-    "Text": "",
-    "Label":"CONTACT_HIRE_DATE"
+    "Text": "Find all Scorpio employees by birth date",
+    "Label":"CONTACT_BIRTHDAY"
   },
   {
-    "Text": "",
-    "Label":"CONTACT_HIRE_DATE"
-  },
-  {
-    "Text": "",
-    "Label":"CONTACT_HIRE_DATE"
-  },
-  {
-    "Text": "",
-    "Label":"CONTACT_HIRE_DATE"
-  },
-  {
-    "Text": "",
-    "Label":"CONTACT_HIRE_DATE"
+    "Text": "Show me birthdays in the first quarter",
+    "Label":"CONTACT_BIRTHDAY"
   }
 ]
