@@ -106,12 +106,4 @@ namespace ModelBuilder.Preprocessing
             return !string.IsNullOrWhiteSpace(text) && SplitPattern.IsMatch(text);
         }
     }
-
-    // Extended QueryRecord to match the existing structure
-    public class QueryRecord
-    {
-        public string Text { get; set; } = string.Empty;
-        public string Label { get; set; } = string.Empty;
-        public string OriginalText { get; set; } = string.Empty;
-    }
 }

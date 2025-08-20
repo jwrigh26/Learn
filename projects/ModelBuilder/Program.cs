@@ -2,11 +2,9 @@ using System.Text.Json;
 using ModelBuilder;
 using ModelBuilder.Preprocessing;
 
-
 // ModelBuilder: Combines individual intent JSON files into a single training dataset.
 // This tool reads all .json files from the Data directory and combines them into 
 // a versioned dataset files for ML model training.
-
 
 Console.WriteLine("ModelBuilder: Intent Dataset Generator");
 Console.WriteLine("=====================================");
@@ -93,6 +91,13 @@ foreach (var jsonFile in jsonFiles)
 
         if (records != null && records.Count > 0)
         {
+            // First split multi-intent queries into focused fragments
+            // var splitRecords = SentenceSplitter.SplitQueries(records);
+            // if (splitRecords.Count > records.Count)
+            // {
+            //     Console.WriteLine($"Split {records.Count} records into {splitRecords.Count} fragments");
+            // }
+
             // Process each record's text through StopwordPreprocessor
             var processRecords = new List<QueryRecord>();
             Console.WriteLine($"Processing {records.Count} text samples...");
@@ -221,14 +226,13 @@ catch (Exception ex)
     return 1;
 }
 
-
+// QueryRecord class used by both SentenceSplitter and Program
 public class QueryRecord
 {
     public string Text { get; set; } = string.Empty;
     public string Label { get; set; } = string.Empty;
     public string OriginalText { get; set; } = string.Empty; // Keep original text for reference
 }
-
 
 public class DatasetMetadata
 {
