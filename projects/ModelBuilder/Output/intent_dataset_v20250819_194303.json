@@ -1,0 +1,242 @@
+[
+  {
+    "Text": "show info rick",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "Show me info about rick"
+  },
+  {
+    "Text": "tell morty smith",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "tell me about morty smith"
+  },
+  {
+    "Text": "get detail summer",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "get details for summer"
+  },
+  {
+    "Text": "information jerry smith",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "information on Jerry Smith"
+  },
+  {
+    "Text": "contact info beth summer",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "Contact info for Beth and Summer"
+  },
+  {
+    "Text": "contact detail employeee",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "Contact details for all employeees"
+  },
+  {
+    "Text": "profile beth smith",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "profile for Beth smith"
+  },
+  {
+    "Text": "tell info rick sanchez",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "tell me info for rick sanchez"
+  },
+  {
+    "Text": "email address rick sanchez",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "email address for Rick Sanchez"
+  },
+  {
+    "Text": "morty email",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Morty\u0027s email"
+  },
+  {
+    "Text": "send summer email morty",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Send me Summer\u0027s email and Morty\u0027s too"
+  },
+  {
+    "Text": "give email address beth s",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Give me the email address for Beth S"
+  },
+  {
+    "Text": "gene email",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "What is Gene\u0027s email?"
+  },
+  {
+    "Text": "know justin email address",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Do you know Justin\u0027s email address?"
+  },
+  {
+    "Text": "us gmail email service",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Who here uses gmail for their email service?"
+  },
+  {
+    "Text": "employee not email",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Which employees do not have an email"
+  },
+  {
+    "Text": "employee hired before 2020",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "employees hired before 2020"
+  },
+  {
+    "Text": "started after january 2021",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "who started after January 2021"
+  },
+  {
+    "Text": "show people hired 2019",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "show me people hired in 2019"
+  },
+  {
+    "Text": "employee starting between 2020 2022",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "employees starting between 2020 and 2022"
+  },
+  {
+    "Text": "recent hire from last year",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "recent hires from last year"
+  },
+  {
+    "Text": "need people hired after 2023",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "Need people hired after 2023"
+  },
+  {
+    "Text": "julie hired december thi year last year",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "Was Julie hired in December this year or last year"
+  },
+  {
+    "Text": "matt hired",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "When was matt hired?"
+  },
+  {
+    "Text": "rick phone number",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "What is Rick\u0027s phone number"
+  },
+  {
+    "Text": "phone morty smith",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "Phone for Morty Smith"
+  },
+  {
+    "Text": "cell phone number summer",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "Cell phone number for Summer"
+  },
+  {
+    "Text": "know beth cell number",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "Do you know Beth\u0027s cell number"
+  },
+  {
+    "Text": "mobile phone number morty",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "Which mobile phone number is for Morty?"
+  },
+  {
+    "Text": "mobile number rick",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "Mobile number for Rick please"
+  },
+  {
+    "Text": "morty mobile number",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "What\u0027s Morty\u0027s mobile number"
+  },
+  {
+    "Text": "need employee phone number",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "I need employees phone number"
+  },
+  {
+    "Text": "employee born 1990",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "employees born in 1990"
+  },
+  {
+    "Text": "born 2000",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "who was born in 2000"
+  },
+  {
+    "Text": "people born 1985",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "people born in 1985"
+  },
+  {
+    "Text": "everyone born before 1980",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "everyone born before 1980"
+  },
+  {
+    "Text": "show birthday thi month",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "show me birthdays this month"
+  },
+  {
+    "Text": "employee birthday next week",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "employees with birthday next week"
+  },
+  {
+    "Text": "birthday today",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "who has a birthday today?"
+  },
+  {
+    "Text": "birthday anniversary coming up",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "who has a birthday anniversary coming up?"
+  },
+  {
+    "Text": "mailing address morty including suite",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "mailing address for morty. Including the suite"
+  },
+  {
+    "Text": "rick home address",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "What is Ricks\u0027 home address"
+  },
+  {
+    "Text": "doe summer live",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "Where does summer live?"
+  },
+  {
+    "Text": "address jerry",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "address for Jerry"
+  },
+  {
+    "Text": "give beth mailing address",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "give me beths mailing address"
+  },
+  {
+    "Text": "need beth summer address",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "I need beth and summer\u0027s address"
+  },
+  {
+    "Text": "give morty address",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "give me morty address"
+  },
+  {
+    "Text": "address salt lake city",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "Who\u0027s address is in Salt Lake City?"
+  }
+]

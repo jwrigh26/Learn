@@ -1,0 +1,21 @@
+{
+  "Version": "20250819_194303",
+  "CreatedAt": "2025-08-20T01:43:03.442724Z",
+  "SourceFiles": [
+    "CONTACT_INFO.json",
+    "CONTACT_EMAIL.json",
+    "CONTACT_HIRE_DATE.json",
+    "CONTACT_PHONE.json",
+    "CONTACT_BIRTHDAY.json",
+    "CONTACT_ADDRESS.json"
+  ],
+  "TotalRecords": 48,
+  "IntentCounts": {
+    "CONTACT_INFO": 8,
+    "CONTACT_EMAIL": 8,
+    "CONTACT_HIRE_DATE": 8,
+    "CONTACT_PHONE": 8,
+    "CONTACT_BIRTHDAY": 8,
+    "CONTACT_ADDRESS": 8
+  }
+}

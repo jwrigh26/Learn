@@ -1,0 +1,34 @@
+[
+  {
+    "Text": "employees born in 1990",
+    "Label": "CONTACT_BIRTHDAY"
+  },
+  {
+    "Text": "who was born in 2000",
+    "Label": "CONTACT_BIRTHDAY"
+  },
+  {
+    "Text": "people born in 1985",
+    "Label": "CONTACT_BIRTHDAY"
+  },
+  {
+    "Text": "everyone born before 1980",
+    "Label":"CONTACT_BIRTHDAY"
+  },
+  {
+    "Text": "show me birthdays this month",
+    "Label":"CONTACT_BIRTHDAY"
+  },
+  {
+    "Text": "employees with birthday next week",
+    "Label": "CONTACT_BIRTHDAY"
+  },
+  {
+    "Text": "who has a birthday today?",
+    "Label": "CONTACT_BIRTHDAY"
+  },
+  {
+    "Text": "who has a birthday anniversary coming up?",
+    "Label":"CONTACT_BIRTHDAY"
+  }
+]

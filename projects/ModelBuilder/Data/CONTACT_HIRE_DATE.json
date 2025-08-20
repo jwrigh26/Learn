@@ -1,0 +1,34 @@
+[
+  {
+    "Text": "employees hired before 2020",
+    "Label": "CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "who started after January 2021",
+    "Label": "CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "show me people hired in 2019",
+    "Label": "CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "employees starting between 2020 and 2022",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "recent hires from last year",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "Need people hired after 2023",
+    "Label": "CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "Was Julie hired in December this year or last year",
+    "Label": "CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "When was matt hired?",
+    "Label":"CONTACT_HIRE_DATE"
+  }
+]

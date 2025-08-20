@@ -1,0 +1,34 @@
+[
+  {
+    "Text": "mailing address for morty. Including the suite",
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "What is Ricks' home address",
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "Where does summer live?",
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "address for Jerry",
+    "Label":"CONTACT_ADDRESS"
+  },
+  {
+    "Text": "give me beths mailing address",
+    "Label":"CONTACT_ADDRESS"
+  },
+  {
+    "Text": "I need beth and summer's address",
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "give me morty address",
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "Who's address is in Salt Lake City?",
+    "Label":"CONTACT_ADDRESS"
+  }
+]

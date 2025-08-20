@@ -1,0 +1,34 @@
+[
+  {
+    "Text": "email address for Rick Sanchez",
+    "Label": "CONTACT_EMAIL"
+  },
+  {
+    "Text": "Morty's email",
+    "Label": "CONTACT_EMAIL"
+  },
+  {
+    "Text": "Send me Summer's email and Morty's too",
+    "Label": "CONTACT_EMAIL"
+  },
+  {
+    "Text": "Give me the email address for Beth S",
+    "Label":"CONTACT_EMAIL"
+  },
+  {
+    "Text": "What is Gene's email?",
+    "Label":"CONTACT_EMAIL"
+  },
+  {
+    "Text": "Do you know Justin's email address?",
+    "Label": "CONTACT_EMAIL"
+  },
+  {
+    "Text": "Who here uses gmail for their email service?",
+    "Label": "CONTACT_EMAIL"
+  },
+  {
+    "Text": "Which employees do not have an email",
+    "Label":"CONTACT_EMAIL"
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "Text": "What is Rick's phone number",
+    "Label": "CONTACT_PHONE"
+  },
+  {
+    "Text": "Phone for Morty Smith",
+    "Label": "CONTACT_PHONE"
+  },
+  {
+    "Text": "Cell phone number for Summer",
+    "Label": "CONTACT_PHONE"
+  },
+  {
+    "Text": "Do you know Beth's cell number",
+    "Label":"CONTACT_PHONE"
+  },
+  {
+    "Text": "Which mobile phone number is for Morty?",
+    "Label":"CONTACT_PHONE"
+  },
+  {
+    "Text": "Mobile number for Rick please",
+    "Label": "CONTACT_PHONE"
+  },
+  {
+    "Text": "What's Morty's mobile number",
+    "Label": "CONTACT_PHONE"
+  },
+  {
+    "Text": "I need employees phone number",
+    "Label":"CONTACT_PHONE"
+  }
+]

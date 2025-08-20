@@ -1,0 +1,34 @@
+[
+  {
+    "Text": "Show me info about rick",
+    "Label": "CONTACT_INFO"
+  },
+  {
+    "Text": "tell me about morty smith",
+    "Label": "CONTACT_INFO"
+  },
+  {
+    "Text": "get details for summer",
+    "Label": "CONTACT_INFO"
+  },
+  {
+    "Text": "information on Jerry Smith",
+    "Label":"CONTACT_INFO"
+  },
+  {
+    "Text": "Contact info for Beth and Summer",
+    "Label":"CONTACT_INFO"
+  },
+  {
+    "Text": "Contact details for all employeees",
+    "Label": "CONTACT_INFO"
+  },
+  {
+    "Text": "profile for Beth smith",
+    "Label": "CONTACT_INFO"
+  },
+  {
+    "Text": "tell me info for rick sanchez",
+    "Label":"CONTACT_INFO"
+  }
+]
