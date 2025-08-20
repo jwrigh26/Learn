@@ -28,7 +28,11 @@
     "Label": "CONTACT_PHONE"
   },
   {
-    "Text": "I need employees phone number",
+    "Text": "I need employees phone number except susan's I want her address",
+    "Label":"CONTACT_PHONE"
+  },
+  {
+    "Text": "I want phone numbers, but only for Jack and Kelly",
     "Label":"CONTACT_PHONE"
   }
 ]
