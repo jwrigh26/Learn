@@ -30,5 +30,89 @@
   {
     "Text": "When was matt hired?",
     "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "What's Rick's start date at the company",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "Show me Summer's employment begin date",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "When did Morty join the team",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "Find Jerry's onboarding date",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "Tell me Beth's first day of work",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "Who was hired in March 2022",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "List employees with hire dates in Q1 2023",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "Show me who started working here on January 15th",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "Find all new hires from the summer of 2021",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "When did we hire our most recent employee",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "Show me employees hired on weekdays vs weekends",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "Who started before the pandemic in 2020",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "Find people with anniversary dates this month",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "What's the earliest hire date in our records",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "Show me tenure for employees hired in 2019",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "Who has been here longer than 5 years",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "Find employees with start dates in the fall season",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "When did Tim and Sarah begin employment",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "Show me probationary period end dates for new hires",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "Find who was hired during the holiday season",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "What year did most of our team get hired",
+    "Label":"CONTACT_HIRE_DATE"
   }
 ]

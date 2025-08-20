@@ -13,11 +13,11 @@
   },
   {
     "Text": "address for Jerry",
-    "Label":"CONTACT_ADDRESS"
+    "Label": "CONTACT_ADDRESS"
   },
   {
     "Text": "give me beths mailing address",
-    "Label":"CONTACT_ADDRESS"
+    "Label": "CONTACT_ADDRESS"
   },
   {
     "Text": "I need beth and summer's address",
@@ -29,6 +29,90 @@
   },
   {
     "Text": "Who's address is in Salt Lake City?",
-    "Label":"CONTACT_ADDRESS"
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "Show me Rick's street address",
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "What's the physical address for Summer Smith",
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "I need the home address of Jerry",
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "Can you find Morty's residential address",
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "Tell me where Beth lives including zip code",
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "Get me the mailing address for all employees in Utah",
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "What's Jerry's apartment number and street",
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "Find the work address for Rick Sanchez",
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "I want to know Summer's current living address",
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "Where can I send mail to Morty Smith",
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "Find me Arcus's apartment complex number",
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "Which address has an apartment number 101?",
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "Which house number has postal code 84105",
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "Which state do Arcus and Tim live in?",
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "Which employee residence has zip code 84107",
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "How many employees live in apartments",
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "Show me the complete address for Beth including unit number",
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "What's the street name where Rick lives",
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "I need addresses for employees in zip code 84102",
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "Find the residential address of Summer excluding work address",
+    "Label": "CONTACT_ADDRESS"
+  },
+  {
+    "Text": "Where do Jerry and Beth currently reside",
+    "Label": "CONTACT_ADDRESS"
   }
 ]
