@@ -34,15 +34,15 @@ var extraKeepWords = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
     // Add your domain-specific terms here
     "api", "database", "backend", "frontend", "oauth", "jwt", "ssl", "https", "address",
     "admin", "user", "client", "server", "deployment", "kubernetes", "docker"
-    // TODO: Consider loading these from a confi file for easier maintenance
+    // TODO: Consider loading these from a config file for easier maintenance
 };
 Console.WriteLine($"Using {extraKeepWords.Count} additional keep words");
 
 // Text preprocessing options
-bool collapseNumbers = false; //Set to true if you want nubmers replaced with <NUM>
+bool collapseNumbers = false; //Set to true if you want numbers replaced with <NUM>
 
 // Note: collapseNumbers helps generalize numeric patterns but may lose important
-// context like specific dates, IDs, or quanttites that matter for intent classification
+// context like specific dates, IDs, or quantities that matter for intent classification
 
 Console.WriteLine($"Text preprocessing: collapseNumbers={collapseNumbers}");
 
@@ -53,9 +53,9 @@ var outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "Output");
 // Ensure directories exist
 if (!Directory.Exists(dataDirectory))
 {
-    Console.WriteLine($"Data directory not found ${dataDirectory}");
+    Console.WriteLine($"Data directory not found {dataDirectory}");
     Console.WriteLine("Please create the Data directory with intent JSON files.");
-    return Environment.ExitCode = 1;
+    return 1;
 }
 
 Directory.CreateDirectory(outputDirectory);
@@ -65,7 +65,7 @@ var jsonFiles = Directory.GetFiles(dataDirectory, "*.json");
 if (jsonFiles.Length == 0)
 {
     Console.WriteLine($"No JSON files found in: {dataDirectory}");
-    return Environment.ExitCode = 1;
+    return 1;
 }
 
 Console.WriteLine($"Found {jsonFiles.Length} JSON files:");
@@ -93,7 +93,7 @@ foreach (var jsonFile in jsonFiles)
 
         if (records != null && records.Count > 0)
         {
-            // Process each records's text through StopwordPrepocessor
+            // Process each record's text through StopwordPreprocessor
             var processRecords = new List<QueryRecord>();
             Console.WriteLine($"Processing {records.Count} text samples...");
 
@@ -119,14 +119,16 @@ foreach (var jsonFile in jsonFiles)
 
                     processRecords.Add(processRecord);
 
-                    // Show first few transofrmations as examples
+                    // Show first few transformations as examples
                     if (processRecords.Count <= 3 && record.Text != normalizedText)
                     {
                         Console.WriteLine($"  \"{record.Text}\" -> \"{normalizedText}\"");
                     }
                 }
                 else
-                { processRecords.Add(record); }
+                {
+                    processRecords.Add(record);
+                }
             }
 
             allRecords.AddRange(processRecords);
@@ -152,14 +154,14 @@ foreach (var jsonFile in jsonFiles)
     catch (Exception ex)
     {
         Console.WriteLine($"Error reading {Path.GetFileName(jsonFile)}: {ex.Message}");
-        Environment.ExitCode = 1;
+        return 1;
     }
 }
 
 if (allRecords.Count == 0)
 {
-    Console.WriteLine("No reocrds were loaded from any files.");
-    Environment.ExitCode = 1;
+    Console.WriteLine("No records were loaded from any files.");
+    return 1;
 }
 
 
@@ -210,13 +212,13 @@ try
         Console.WriteLine($" - {intent}: {count} ({percentage:F1}%)");
     }
     Console.WriteLine($"Output save to: {outputDirectory}");
-    return Environment.ExitCode = 0;
+    return 0;
 
 }
 catch (Exception ex)
 {
     Console.WriteLine($"Error writing output files: {ex.Message}");
-    return Environment.ExitCode = 1;
+    return 1;
 }
 
 

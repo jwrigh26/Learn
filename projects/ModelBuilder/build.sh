@@ -3,11 +3,12 @@
 # ModelBuilder Quick Build Script
 # This script builds and runs the ModelBuilder tool to generate training datasets.
 
+set -euo pipefail
 
 echo "Building ModelBuilder..."
 echo "-----------------------------------"
 
-# Change to ModelBuilder directory
+# Change to script directory (ModelBuilder)
 cd "$(dirname "$0")" || exit 1
 
 # Check if we're in the right directory
@@ -31,7 +32,7 @@ echo ""
 echo "Running ModelBuilder..."
 dotnet run
 
-if [ $? -eq 0]; then
+if [ $? -eq 0 ]; then
     echo ""
     echo "ModelBuilder completed successfully."
     echo ""

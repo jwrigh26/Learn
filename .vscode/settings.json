@@ -1,0 +1,9 @@
+{
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingQuotes": "always",
+  "editor.autoClosingOvertype": "always",
+  "editor.autoSurround": "languageDefined",
+  "editor.formatOnType": false,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.suggest.insertMode": "insert"
+}
