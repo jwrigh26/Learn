@@ -114,5 +114,61 @@
   {
     "Text": "What year did most of our team get hired",
     "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "Show me Rick's exact hire date",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "What's the specific start date for Summer",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "When was Morty's employment start date",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "Find Jerry's official hire date",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "What date did Beth start working here",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "Show me hire dates for all employees",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "I need employment start dates only",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "What's the hire date for Tim",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "Find start date information for Sarah",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "Show me when each employee was hired",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "I want hire dates, not other information",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "What's Rick's employment commencement date",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "Find the date Morty joined our company",
+    "Label":"CONTACT_HIRE_DATE"
+  },
+  {
+    "Text": "Show me Summer's first day on the job",
+    "Label":"CONTACT_HIRE_DATE"
   }
 ]
