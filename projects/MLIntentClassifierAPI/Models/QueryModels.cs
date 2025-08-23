@@ -3,23 +3,29 @@ namespace MLIntentClassifierAPI.Models;
 
 public sealed class QuerySlots
 {
-    public string? Field { get; set; }                // e.g., "OriginalHireDate"
+    public List<string> Fields { get; set; } = new();                // e.g., "OriginalHireDate"
     public string? Operator { get; set; }             // e.g., "before", "after", "between"
-    public DateTime? DateStart { get; set; }
-    public DateTime? DateEnd { get; set; }
-    public string? Department { get; set; }           // canonical department
-    public string? Role { get; set; }                 // canonical role
-    public string? Location { get; set; }             // canonical location
-    public List<string> Names { get; set; } = new();  // resolved employee display names
+    public DateTime? Date{ get; set; }
+    public DateRange? Range { get; set; }           // canonical department
 }
 
+public sealed class DateRange
+{
+    public DateTime Start { get; set; }
+    public DateTime End { get; set; }
+}
+
+public sealed class NameMatch
+{
+    public string Name { get; set; } = "";
+    public int Score { get; set;  }
+}
 
 public sealed class QueryUnderstanding
 {
     public Intent Intent { get; set; }
     public QuerySlots Slots { get; set; } = new();
     public List<Employee> Employees { get; set; } = new();
-    public List<Employee> FilteredEmployees { get; set; } = new();
 }
 
 public sealed class QueryRecord 

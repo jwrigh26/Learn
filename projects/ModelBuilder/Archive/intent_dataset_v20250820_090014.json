@@ -1,0 +1,1012 @@
+[
+  {
+    "Text": "show info rick",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "Show me info about rick"
+  },
+  {
+    "Text": "tell morty smith",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "tell me about morty smith"
+  },
+  {
+    "Text": "get detail summer",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "get details for summer"
+  },
+  {
+    "Text": "information jerry smith",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "information on Jerry Smith"
+  },
+  {
+    "Text": "contact info beth summer",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "Contact info for Beth and Summer"
+  },
+  {
+    "Text": "contact detail employeee",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "Contact details for all employeees"
+  },
+  {
+    "Text": "profile beth smith",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "profile for Beth smith"
+  },
+  {
+    "Text": "tell info rick sanchez",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "tell me info for rick sanchez"
+  },
+  {
+    "Text": "arcu philip contact information",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "What is Arcus and Philip\u0027s contact information?"
+  },
+  {
+    "Text": "give morty detial",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "Can you give me Morty\u0027s detials"
+  },
+  {
+    "Text": "need fact low down summer smith",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "Need the facts and low-down on Summer Smith"
+  },
+  {
+    "Text": "show everything jerry",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "Show me everything about Jerry"
+  },
+  {
+    "Text": "need beth complete profile",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "I need Beth\u0027s complete profile"
+  },
+  {
+    "Text": "give detail rick sanchez",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "Give me all details on Rick Sanchez"
+  },
+  {
+    "Text": "tell morty",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "What can you tell me about Morty"
+  },
+  {
+    "Text": "find comprehensive info summer",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "Find comprehensive info for Summer"
+  },
+  {
+    "Text": "show tim employee record",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "Show me Tim\u0027s employee record"
+  },
+  {
+    "Text": "want to know sarah background",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "I want to know about Sarah\u0027s background"
+  },
+  {
+    "Text": "get full rundown beth",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "Get me the full rundown on Beth"
+  },
+  {
+    "Text": "tell know rick",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "Tell me what you know about Rick"
+  },
+  {
+    "Text": "show jerry personnel file",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "Show me Jerry\u0027s personnel file"
+  },
+  {
+    "Text": "need info employee",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "I need info on all our employees"
+  },
+  {
+    "Text": "morty full contact information",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "What\u0027s Morty\u0027s full contact information"
+  },
+  {
+    "Text": "show employee directory rick",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "Show me the employee directory for Rick"
+  },
+  {
+    "Text": "give summer complete detail",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "Give me Summer\u0027s complete details"
+  },
+  {
+    "Text": "want to see beth entire profile",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "I want to see Beth\u0027s entire profile"
+  },
+  {
+    "Text": "tell jerry work information",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "Tell me about Jerry\u0027s work information"
+  },
+  {
+    "Text": "show available data tim",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "Show me all available data on Tim"
+  },
+  {
+    "Text": "get overview sarah",
+    "Label": "CONTACT_INFO",
+    "OriginalText": "Get me the overview for Sarah"
+  },
+  {
+    "Text": "email address rick sanchez",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "email address for Rick Sanchez"
+  },
+  {
+    "Text": "show edu email address",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Show me who has a .edu email address"
+  },
+  {
+    "Text": "get summer emergency contact email",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Get me Summer\u0027s emergency contact email"
+  },
+  {
+    "Text": "email address marked inactive",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Which email addresses are marked as inactive"
+  },
+  {
+    "Text": "find employee using yahoo email service",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Find employees using Yahoo email services"
+  },
+  {
+    "Text": "rick email signature line",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "What\u0027s Rick\u0027s email signature line"
+  },
+  {
+    "Text": "show department head email address",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Show me all department head email addresses"
+  },
+  {
+    "Text": "need morty external email vendor",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "I need Morty\u0027s external email for vendors"
+  },
+  {
+    "Text": "find duplicate email address system",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Find duplicate email addresses in our system"
+  },
+  {
+    "Text": "employee need email setup assistance",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Which employees need email setup assistance"
+  },
+  {
+    "Text": "show email address bounce back",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Show me email addresses that bounce back"
+  },
+  {
+    "Text": "shared email customer service",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "What\u0027s the shared email for customer service"
+  },
+  {
+    "Text": "send summer email morty",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Send me Summer\u0027s email and Morty\u0027s too"
+  },
+  {
+    "Text": "give email address beth s",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Give me the email address for Beth S"
+  },
+  {
+    "Text": "gene email",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "What is Gene\u0027s email?"
+  },
+  {
+    "Text": "know justin email address",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Do you know Justin\u0027s email address?"
+  },
+  {
+    "Text": "us gmail email service",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Who here uses gmail for their email service?"
+  },
+  {
+    "Text": "employee not email",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Which employees do not have an email"
+  },
+  {
+    "Text": "find jerry work email address",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Find Jerry\u0027s work email address"
+  },
+  {
+    "Text": "beth personal email",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "What\u0027s Beth\u0027s personal email"
+  },
+  {
+    "Text": "show summer corporate email",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Show me Summer\u0027s corporate email"
+  },
+  {
+    "Text": "need morty business email address",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "I need Morty\u0027s business email address"
+  },
+  {
+    "Text": "get rick primary email contact",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Get me Rick\u0027s primary email contact"
+  },
+  {
+    "Text": "tim email domain",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "What\u0027s Tim\u0027s email domain"
+  },
+  {
+    "Text": "find employee gmail address",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Find all employees with gmail addresses"
+  },
+  {
+    "Text": "show us company email domain",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Show me who uses company email domains"
+  },
+  {
+    "Text": "email address contain name sarah",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Which email addresses contain the name Sarah"
+  },
+  {
+    "Text": "need email address marketing team",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "I need email addresses for the marketing team"
+  },
+  {
+    "Text": "email format new employee",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "What\u0027s the email format for new employees"
+  },
+  {
+    "Text": "find email address ending org",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Find email addresses ending with .org"
+  },
+  {
+    "Text": "show jerry alternate email address",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Show me Jerry\u0027s alternate email address"
+  },
+  {
+    "Text": "employee multiple email account",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Which employees have multiple email accounts"
+  },
+  {
+    "Text": "need distribution list email hr",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "I need the distribution list email for HR"
+  },
+  {
+    "Text": "beth email username domain",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "What\u0027s Beth\u0027s email username without the domain"
+  },
+  {
+    "Text": "find email address number",
+    "Label": "CONTACT_EMAIL",
+    "OriginalText": "Find all email addresses with numbers in them"
+  },
+  {
+    "Text": "employee hired before 2020",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "employees hired before 2020"
+  },
+  {
+    "Text": "started after january 2021",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "who started after January 2021"
+  },
+  {
+    "Text": "show people hired 2019",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "show me people hired in 2019"
+  },
+  {
+    "Text": "employee starting between 2020 2022",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "employees starting between 2020 and 2022"
+  },
+  {
+    "Text": "recent hire from last year",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "recent hires from last year"
+  },
+  {
+    "Text": "need people hired after 2023",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "Need people hired after 2023"
+  },
+  {
+    "Text": "julie hired december thi year last year",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "Was Julie hired in December this year or last year"
+  },
+  {
+    "Text": "matt hired",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "When was matt hired?"
+  },
+  {
+    "Text": "rick start date company",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "What\u0027s Rick\u0027s start date at the company"
+  },
+  {
+    "Text": "show summer employment begin date",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "Show me Summer\u0027s employment begin date"
+  },
+  {
+    "Text": "morty join team",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "When did Morty join the team"
+  },
+  {
+    "Text": "find jerry onboarding date",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "Find Jerry\u0027s onboarding date"
+  },
+  {
+    "Text": "tell beth first day work",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "Tell me Beth\u0027s first day of work"
+  },
+  {
+    "Text": "hired march 2022",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "Who was hired in March 2022"
+  },
+  {
+    "Text": "list employee hire date q1 2023",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "List employees with hire dates in Q1 2023"
+  },
+  {
+    "Text": "show started working january 15th",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "Show me who started working here on January 15th"
+  },
+  {
+    "Text": "find new hire from summer 2021",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "Find all new hires from the summer of 2021"
+  },
+  {
+    "Text": "hire recent employee",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "When did we hire our most recent employee"
+  },
+  {
+    "Text": "show employee hired weekday vs weekend",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "Show me employees hired on weekdays vs weekends"
+  },
+  {
+    "Text": "started before pandemic 2020",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "Who started before the pandemic in 2020"
+  },
+  {
+    "Text": "find people anniversary date thi month",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "Find people with anniversary dates this month"
+  },
+  {
+    "Text": "earliest hire date record",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "What\u0027s the earliest hire date in our records"
+  },
+  {
+    "Text": "show tenure employee hired 2019",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "Show me tenure for employees hired in 2019"
+  },
+  {
+    "Text": "longer 5 year",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "Who has been here longer than 5 years"
+  },
+  {
+    "Text": "find employee start date fall season",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "Find employees with start dates in the fall season"
+  },
+  {
+    "Text": "tim sarah begin employment",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "When did Tim and Sarah begin employment"
+  },
+  {
+    "Text": "show probationary period end date new hire",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "Show me probationary period end dates for new hires"
+  },
+  {
+    "Text": "find hired during holiday season",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "Find who was hired during the holiday season"
+  },
+  {
+    "Text": "year team get hired",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "What year did most of our team get hired"
+  },
+  {
+    "Text": "show rick exact hire date",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "Show me Rick\u0027s exact hire date"
+  },
+  {
+    "Text": "specific start date summer",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "What\u0027s the specific start date for Summer"
+  },
+  {
+    "Text": "morty employment start date",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "When was Morty\u0027s employment start date"
+  },
+  {
+    "Text": "find jerry official hire date",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "Find Jerry\u0027s official hire date"
+  },
+  {
+    "Text": "date beth start working",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "What date did Beth start working here"
+  },
+  {
+    "Text": "show hire date employee",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "Show me hire dates for all employees"
+  },
+  {
+    "Text": "need employment start date",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "I need employment start dates only"
+  },
+  {
+    "Text": "hire date tim",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "What\u0027s the hire date for Tim"
+  },
+  {
+    "Text": "find start date information sarah",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "Find start date information for Sarah"
+  },
+  {
+    "Text": "show employee hired",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "Show me when each employee was hired"
+  },
+  {
+    "Text": "want hire date not information",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "I want hire dates, not other information"
+  },
+  {
+    "Text": "rick employment commencement date",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "What\u0027s Rick\u0027s employment commencement date"
+  },
+  {
+    "Text": "find date morty joined company",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "Find the date Morty joined our company"
+  },
+  {
+    "Text": "show summer first day job",
+    "Label": "CONTACT_HIRE_DATE",
+    "OriginalText": "Show me Summer\u0027s first day on the job"
+  },
+  {
+    "Text": "rick phone number",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "What is Rick\u0027s phone number"
+  },
+  {
+    "Text": "phone morty smith",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "Phone for Morty Smith"
+  },
+  {
+    "Text": "cell phone number summer",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "Cell phone number for Summer"
+  },
+  {
+    "Text": "know beth cell number",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "Do you know Beth\u0027s cell number"
+  },
+  {
+    "Text": "mobile phone number morty",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "Which mobile phone number is for Morty?"
+  },
+  {
+    "Text": "mobile number rick",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "Mobile number for Rick please"
+  },
+  {
+    "Text": "morty mobile number",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "What\u0027s Morty\u0027s mobile number"
+  },
+  {
+    "Text": "need employee phone number except susan",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "I need employees phone number except susan\u0027s"
+  },
+  {
+    "Text": "want phone number jack kelly",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "I want phone numbers, but only for Jack and Kelly"
+  },
+  {
+    "Text": "find jerry work phone number",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "Find Jerry\u0027s work phone number"
+  },
+  {
+    "Text": "beth home telephone number",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "What\u0027s Beth\u0027s home telephone number"
+  },
+  {
+    "Text": "show summer contact number",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "Show me Summer\u0027s contact number"
+  },
+  {
+    "Text": "need rick emergency contact phone",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "I need Rick\u0027s emergency contact phone"
+  },
+  {
+    "Text": "get morty personal cell phone",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "Get me Morty\u0027s personal cell phone"
+  },
+  {
+    "Text": "office phone tim",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "What\u0027s the office phone for Tim"
+  },
+  {
+    "Text": "find phone number employee utah",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "Find all phone numbers for employees in Utah"
+  },
+  {
+    "Text": "show 801 area code",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "Show me who has a 801 area code"
+  },
+  {
+    "Text": "employee don\u0027t mobile number listed",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "Which employees don\u0027t have mobile numbers listed"
+  },
+  {
+    "Text": "need sarah direct line number",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "I need Sarah\u0027s direct line number"
+  },
+  {
+    "Text": "landline beth department",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "What\u0027s the landline for Beth\u0027s department"
+  },
+  {
+    "Text": "find phone number start 555",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "Find phone numbers that start with 555"
+  },
+  {
+    "Text": "show jerry alternate phone number",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "Show me Jerry\u0027s alternate phone number"
+  },
+  {
+    "Text": "get business phone rick sanchez",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "Get the business phone for Rick Sanchez"
+  },
+  {
+    "Text": "morty extension number",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "What\u0027s Morty\u0027s extension number"
+  },
+  {
+    "Text": "find employee international phone number",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "Find employees with international phone numbers"
+  },
+  {
+    "Text": "show contact number remote worker",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "Show me all contact numbers for remote workers"
+  },
+  {
+    "Text": "phone number belong to newest hire",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "Which phone number belongs to the newest hire"
+  },
+  {
+    "Text": "need after hour contact summer",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "I need the after-hours contact for Summer"
+  },
+  {
+    "Text": "find duplicate phone number system",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "Find duplicate phone numbers in our system"
+  },
+  {
+    "Text": "find arcu tim extension number",
+    "Label": "CONTACT_PHONE",
+    "OriginalText": "Find Arcus and Tim\u0027s extension numbers please"
+  },
+  {
+    "Text": "employee born 1990",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "employees born in 1990"
+  },
+  {
+    "Text": "show birthday first quarter",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "Show me birthdays in the first quarter"
+  },
+  {
+    "Text": "birthday party coming up",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "Who has a birthday party coming up"
+  },
+  {
+    "Text": "find employee born 1990",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "Find employees born in the 1990s"
+  },
+  {
+    "Text": "show youngest team member birth date",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "Show me the youngest team member\u0027s birth date"
+  },
+  {
+    "Text": "employee born friday",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "Which employees were born on a Friday"
+  },
+  {
+    "Text": "find birthday fall during work hour",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "Find birthdays that fall during work hours"
+  },
+  {
+    "Text": "show need birthday cake thi month",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "Show me who needs birthday cake this month"
+  },
+  {
+    "Text": "find employee summer birthday",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "Find employees with summer birthdays"
+  },
+  {
+    "Text": "sarah zodiac sign based birth date",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "What\u0027s Sarah\u0027s zodiac sign based on birth date"
+  },
+  {
+    "Text": "show november baby office",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "Show me all November babies in the office"
+  },
+  {
+    "Text": "find celebrate birthday during holiday",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "Find who celebrates their birthday during holidays"
+  },
+  {
+    "Text": "people born 1985",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "people born in 1985"
+  },
+  {
+    "Text": "everyone born before 1980",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "everyone born before 1980"
+  },
+  {
+    "Text": "show birthday thi month",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "show me birthdays this month"
+  },
+  {
+    "Text": "employee birthday next week",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "employees with birthday next week"
+  },
+  {
+    "Text": "birthday today",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "who has a birthday today?"
+  },
+  {
+    "Text": "birthday anniversary coming up",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "who has a birthday anniversary coming up?"
+  },
+  {
+    "Text": "rick birth date",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "What\u0027s Rick\u0027s birth date"
+  },
+  {
+    "Text": "summer birthday",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "When is Summer\u0027s birthday"
+  },
+  {
+    "Text": "show morty date birth",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "Show me Morty\u0027s date of birth"
+  },
+  {
+    "Text": "find jerry birthday month",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "Find Jerry\u0027s birthday month"
+  },
+  {
+    "Text": "day beth born",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "What day was Beth born"
+  },
+  {
+    "Text": "show employee born december",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "Show me employees born in December"
+  },
+  {
+    "Text": "celebrate birthday august",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "Who celebrates their birthday in August"
+  },
+  {
+    "Text": "find birthday happening thi week",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "Find all birthdays happening this week"
+  },
+  {
+    "Text": "show turn 30 thi year",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "Show me who turns 30 this year"
+  },
+  {
+    "Text": "employee birthday weekend",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "Which employees have birthdays on weekends"
+  },
+  {
+    "Text": "find people born leap day",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "Find people born on leap day"
+  },
+  {
+    "Text": "show oldest employee by birth year",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "Show me the oldest employee by birth year"
+  },
+  {
+    "Text": "born month tim",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "Who was born in the same month as Tim"
+  },
+  {
+    "Text": "find employee birthday holiday",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "Find employees with birthdays on holidays"
+  },
+  {
+    "Text": "show share birthday",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "Show me who shares the same birthday"
+  },
+  {
+    "Text": "common birth month company",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "What\u0027s the most common birth month in our company"
+  },
+  {
+    "Text": "find scorpio employee by birth date",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "Find all Scorpio employees by birth date"
+  },
+  {
+    "Text": "show birthday first quarter",
+    "Label": "CONTACT_BIRTHDAY",
+    "OriginalText": "Show me birthdays in the first quarter"
+  },
+  {
+    "Text": "mailing address morty including suite",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "mailing address for morty. Including the suite"
+  },
+  {
+    "Text": "rick home address",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "What is Ricks\u0027 home address"
+  },
+  {
+    "Text": "doe summer live",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "Where does summer live?"
+  },
+  {
+    "Text": "address jerry",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "address for Jerry"
+  },
+  {
+    "Text": "give beth mailing address",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "give me beths mailing address"
+  },
+  {
+    "Text": "need beth summer address",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "I need beth and summer\u0027s address"
+  },
+  {
+    "Text": "give morty address",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "give me morty address"
+  },
+  {
+    "Text": "address salt lake city",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "Who\u0027s address is in Salt Lake City?"
+  },
+  {
+    "Text": "show rick street address",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "Show me Rick\u0027s street address"
+  },
+  {
+    "Text": "physical address summer smith",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "What\u0027s the physical address for Summer Smith"
+  },
+  {
+    "Text": "need home address jerry",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "I need the home address of Jerry"
+  },
+  {
+    "Text": "find morty residential address",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "Can you find Morty\u0027s residential address"
+  },
+  {
+    "Text": "tell beth live including zip code",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "Tell me where Beth lives including zip code"
+  },
+  {
+    "Text": "get mailing address employee utah",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "Get me the mailing address for all employees in Utah"
+  },
+  {
+    "Text": "jerry apartment number street",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "What\u0027s Jerry\u0027s apartment number and street"
+  },
+  {
+    "Text": "find work address rick sanchez",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "Find the work address for Rick Sanchez"
+  },
+  {
+    "Text": "want to know summer current living address",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "I want to know Summer\u0027s current living address"
+  },
+  {
+    "Text": "send mail to morty smith",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "Where can I send mail to Morty Smith"
+  },
+  {
+    "Text": "find arcu apartment complex number",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "Find me Arcus\u0027s apartment complex number"
+  },
+  {
+    "Text": "address apartment number 101",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "Which address has an apartment number 101?"
+  },
+  {
+    "Text": "house number postal code 84105",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "Which house number has postal code 84105"
+  },
+  {
+    "Text": "state arcu tim live",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "Which state do Arcus and Tim live in?"
+  },
+  {
+    "Text": "employee residence zip code 84107",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "Which employee residence has zip code 84107"
+  },
+  {
+    "Text": "employee live apartment",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "How many employees live in apartments"
+  },
+  {
+    "Text": "show complete address beth including unit number",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "Show me the complete address for Beth including unit number"
+  },
+  {
+    "Text": "street name rick live",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "What\u0027s the street name where Rick lives"
+  },
+  {
+    "Text": "need address employee zip code 84102",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "I need addresses for employees in zip code 84102"
+  },
+  {
+    "Text": "find residential address summer excluding work address",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "Find the residential address of Summer excluding work address"
+  },
+  {
+    "Text": "jerry beth currently reside",
+    "Label": "CONTACT_ADDRESS",
+    "OriginalText": "Where do Jerry and Beth currently reside"
+  }
+]

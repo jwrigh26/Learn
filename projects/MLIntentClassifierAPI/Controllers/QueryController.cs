@@ -39,7 +39,6 @@ public class QueryController : ControllerBase
                 },
                 slots = understanding.Slots,
                 employees = understanding.Employees,
-                filteredEmployees = understanding.FilteredEmployees
             };
             return Ok(result);
         }

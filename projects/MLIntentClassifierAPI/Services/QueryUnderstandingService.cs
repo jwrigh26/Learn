@@ -6,6 +6,8 @@ using Microsoft.Recognizers.Text.DateTime;
 using FuzzySharp;
 using MLIntentClassifierAPI.Models;
 using MSConfiguration = Microsoft.Extensions.Configuration.IConfiguration;
+using System.IO;
+using System.Linq;
 
 namespace MLIntentClassifierAPI.Services;
 
@@ -21,16 +23,28 @@ public class QueryUnderstandingService
         _dateModel = new DateTimeRecognizer(Culture.English, options: DateTimeOptions.None, lazyInitialization: true)
             .GetDateTimeModel();
         
-        // Load ML.NET model - using the path from your notebooks
-        var modelPath = "/Users/maneki-neko/learning/notebooks/NLP/intent_model.zip";
-        
-        if (!string.IsNullOrWhiteSpace(modelPath) && File.Exists(modelPath))
-        {
-            var ml = new MLContext(seed: 123);
-            using var fs = File.OpenRead(modelPath);
-            var trained = ml.Model.Load(fs, out var _);
-            _engine = ml.Model.CreatePredictionEngine<QueryRecord, IntentPrediction>(trained);
-        }
+        // Load ML.NET model from ModelTrainer output (configured path)
+        string modelPath;
+
+        var trainerOutput = configuration["ModelTrainerOutputPath"];
+        if (string.IsNullOrWhiteSpace(trainerOutput))
+            throw new InvalidOperationException("Configuration 'ModelTrainerOutputPath' is required and must point to the ModelTrainer Output directory.");
+
+        if (!Directory.Exists(trainerOutput))
+            throw new InvalidOperationException($"Configured ModelTrainerOutputPath does not exist: {trainerOutput}");
+
+        var candidates = Directory.GetFiles(trainerOutput, "intent_model_v*.zip", SearchOption.TopDirectoryOnly);
+        if (candidates.Length == 0)
+            throw new FileNotFoundException($"No model file matching 'intent_model_v*.zip' found in {trainerOutput}");
+
+        // If multiple, pick the most recently written one
+        modelPath = candidates.Length == 1 ? candidates[0] : candidates.OrderByDescending(File.GetLastWriteTimeUtc).First();
+
+        // Load the model (will throw if file is invalid)
+        var ml = new MLContext(seed: 42);
+        using var fs = File.OpenRead(modelPath);
+        var trained = ml.Model.Load(fs, out var _);
+        _engine = ml.Model.CreatePredictionEngine<QueryRecord, IntentPrediction>(trained);
     }
     
     public QueryUnderstanding Understand(string text)
@@ -55,7 +69,7 @@ public class QueryUnderstandingService
         return new QueryUnderstanding {
             Intent = intent,
             Slots = slots,
-            Employees = filteredEmployees,
+            // Employees = filteredEmployees,
         };
     }
 
@@ -95,17 +109,17 @@ public class QueryUnderstandingService
         }
 
         // Fallback rules (fast & predictable)
-        if (ContainsAny(text, "email","e-mail","mail")) return Intent.GET_CONTACT_EMAIL;
-        if (ContainsAny(text, "phone","cell","mobile","call")) return Intent.GET_CONTACT_PHONE;
-        if (ContainsAny(text, "address","location","where is")) return Intent.GET_CONTACT_ADDRESS;
-        if (ContainsAny(text, "hire date","hired","start date","joined","before","after","between"))
-            return Intent.FILTER_BY_HIRE_DATE;
-        if (ContainsAny(text, "department","engineering","hr","sales","support"))
-            return Intent.FILTER_BY_DEPARTMENT;
-        if (ContainsAny(text, "office","remote","salt lake","hq","slc"))
-            return Intent.FILTER_BY_LOCATION;
+        if (ContainsAny(text, "email","e-mail","mail")) return Intent.CONTACT_EMAIL;
+        if (ContainsAny(text, "phone","cell","mobile","call")) return Intent.CONTACT_PHONE;
+        if (ContainsAny(text, "address","location","where is")) return Intent.CONTACT_ADDRESS;
+        if (ContainsAny(text, "hire date", "hired", "start date", "joined", "before", "after", "between"))
+            return Intent.CONTACT_HIRE_DATE;
+        if (ContainsAny(text, "department", "engineering", "hr", "sales", "support"))
+            return Intent.CONTACT_INFO;
+        if (ContainsAny(text, "office", "remote", "salt lake", "hq", "slc"))
+            return Intent.CONTACT_INFO;
         if (ContainsAny(text, "birthday","birth date","turns","age"))
-            return Intent.FILTER_BY_BIRTHDAY;
+            return Intent.CONTACT_BIRTHDAY;
 
         return Intent.UNKNOWN;
     }
@@ -118,16 +132,21 @@ public class QueryUnderstandingService
         // Field + operator from phrasing
         if (ContainsAny(text, "hire date","hired","start date","joined"))
         {
-            slots.Field = "OriginalHireDate";
+            // QuerySlots now has a list of Fields
+            slots.Fields.Add("OriginalHireDate");
             if (ContainsAny(text, "before","earlier than","prior to")) slots.Operator = "before";
             else if (ContainsAny(text, "after","later than","since")) slots.Operator = "after";
             else if (ContainsAny(text, "between","from","to","range")) slots.Operator = "between";
         }
 
-        // Department / Role / Location via domain dictionaries
-        slots.Department = MapCanonical(text, domain.Departments);
-        slots.Role = MapCanonical(text, domain.Roles);
-        slots.Location = MapCanonical(text, domain.Locations);
+        // NOTE: QuerySlots no longer contains Department/Role/Location properties
+        // Map domain matches into Fields (as canonical tokens) if needed by downstream logic
+        var dept = MapCanonical(text, domain.Departments);
+        if (!string.IsNullOrEmpty(dept)) slots.Fields.Add($"department:{dept}");
+        var role = MapCanonical(text, domain.Roles);
+        if (!string.IsNullOrEmpty(role)) slots.Fields.Add($"role:{role}");
+        var loc = MapCanonical(text, domain.Locations);
+        if (!string.IsNullOrEmpty(loc)) slots.Fields.Add($"location:{loc}");
 
         // Date parsing (supports "before 2024", "last year", ranges, etc.)
         var dateResults = _dateModel.Parse(text);
@@ -144,25 +163,43 @@ public class QueryUnderstandingService
                 {
                     if (DateTime.TryParse(val, out var d))
                     {
-                        if (slots.Operator == "before") { slots.DateEnd = d; }
-                        else if (slots.Operator == "after") { slots.DateStart = d; }
-                        else if (slots.DateStart is null) { slots.DateStart = d; }
-                        else if (slots.DateEnd is null) { slots.DateEnd = d; }
+                        // For single dates: store as Date. If operator indicates a bound, convert to Range.
+                        if (slots.Operator == "before")
+                        {
+                            slots.Range ??= new DateRange();
+                            slots.Range.End = d;
+                        }
+                        else if (slots.Operator == "after")
+                        {
+                            slots.Range ??= new DateRange();
+                            slots.Range.Start = d;
+                        }
+                        else
+                        {
+                            // default: prefer Date for single specific dates
+                            slots.Date ??= d;
+                        }
                     }
                 }
                 else if (type == "daterange")
                 {
                     if (v.TryGetValue("start", out var s) && DateTime.TryParse(s, out var ds))
-                        slots.DateStart = ds;
+                        slots.Range ??= new DateRange { Start = ds };
                     if (v.TryGetValue("end", out var e) && DateTime.TryParse(e, out var de))
-                        slots.DateEnd = de;
+                        slots.Range ??= new DateRange { End = de };
+                    // If we created a partial Range above, ensure both bounds set when possible
+                    if (slots.Range != null)
+                    {
+                        if (slots.Range.Start == default && v.TryGetValue("start", out var s2) && DateTime.TryParse(s2, out var ds2))
+                            slots.Range.Start = ds2;
+                        if (slots.Range.End == default && v.TryGetValue("end", out var e2) && DateTime.TryParse(e2, out var de2))
+                            slots.Range.End = de2;
+                    }
                     slots.Operator ??= "between";
                 }
             }
         }
 
-        // Use found names
-        slots.Names = foundNames;
 
         return slots;
     }
@@ -191,70 +228,60 @@ public class QueryUnderstandingService
     private static DomainDictionaries InitializeDomainDictionaries()
     {
         var domain = new DomainDictionaries();
-        
-        // Canonical names as consts
-        const string DeptEngineering = "Engineering";
-        const string DeptHR = "Human Resources";
-        const string DeptSales = "Sales";
-        const string DeptSupport = "Support";
 
-        const string RoleManager = "Manager";
-        const string RoleSupervisor = "Supervisor";
-        const string RoleTeamLead = "Team Lead";
-        const string RoleSoftwareEngineer = "Software Engineer";
-        const string RoleDirector = "Director";
+        // Canonical field type names
+        const string Department = "department";
+        const string Position = "position";
+        const string Location = "location";
+        const string Job = "job";
 
-        const string LocSaltLakeCity = "Salt Lake City";
-        const string LocRemote = "Remote";
-        const string LocHQ = "Headquarters";
-
-        // Departments (synonym -> canonical)
+        // Department field synonyms (ways to refer to the concept of "department")
         foreach (var pair in new (string from, string to)[] {
-            ("engineering", DeptEngineering),
-            ("eng", DeptEngineering),
-            ("dev", DeptEngineering),
-            ("development", DeptEngineering),
-            ("hr", DeptHR),
-            ("human resources", DeptHR),
-            ("sales", DeptSales),
-            ("revenue", DeptSales),
-            ("support", DeptSupport),
+            ("dept", Department),
+            ("department", Department),
+            ("departments", Department),
+            ("division", Department),
+            ("branch", Department),
+            ("office", Department),
+            ("section", Department),
+            ("unit", Department),
+            ("team", Department),
+            ("group", Department),
         }) domain.Departments[pair.from] = pair.to;
 
-        // Roles (synonym -> canonical)
+        // Position/Role field synonyms (ways to refer to the concept of "position")
         foreach (var pair in new (string from, string to)[] {
-            ("manager", RoleManager),
-            ("managers", RoleManager),
-            ("supervisor", RoleSupervisor),
-            ("supervisors", RoleSupervisor),
-            ("team lead", RoleTeamLead),
-            ("lead", RoleTeamLead),
-            ("leads", RoleTeamLead),
-            ("developer", RoleSoftwareEngineer),
-            ("engineer", RoleSoftwareEngineer),
-            ("software engineer", RoleSoftwareEngineer),
-            ("director", RoleDirector),
-            ("directors", RoleDirector),
+            ("position", Position),
+            ("positions", Position),
+            ("role", Position),
+            ("roles", Position),
+            ("title", Position),
+            ("titles", Position),
+            ("rank", Position),
+            ("level", Position),
         }) domain.Roles[pair.from] = pair.to;
 
-        // Locations (synonym -> canonical)
+        // Location field synonyms (ways to refer to the concept of "location")
         foreach (var pair in new (string from, string to)[] {
-            ("slc", LocSaltLakeCity),
-            ("salt lake", LocSaltLakeCity),
-            ("salt lake city", LocSaltLakeCity),
-            ("remote", LocRemote),
-            ("hq", LocHQ),
+            ("location", Location),
+            ("locations", Location),
+            ("place", Location),
+            ("site", Location),
+            ("office", Location),
+            ("offices", Location),
+            ("workplace", Location),
+            ("facility", Location),
         }) domain.Locations[pair.from] = pair.to;
 
-        // Role buckets (category -> list of canonical roles)
-        domain.RoleBuckets["managers"] = new List<string> { RoleManager, RoleSupervisor, RoleTeamLead, RoleDirector };
+        // Job field synonyms (ways to refer to the concept of "job" - if different from position)
+        foreach (var pair in new (string from, string to)[] {
+            ("job", Job),
+            ("jobs", Job),
+            ("work", Job),
+            ("task", Job),
+            ("assignment", Job),
+        }) domain.RoleBuckets[pair.from] = new List<string> { pair.to };
 
-        // Known names (optional, for fuzzy)
-        domain.EmployeeNames.AddRange(new [] {
-            "Rick Sanchez","Summer Smith","Morty Smith","Beth Smith","Jerry Smith",
-            "Alice Johnson","Bob Lee","Carol Danvers","Tony Stark","Bruce Wayne","Bird Person"
-        });
-        
         return domain;
     }
 }

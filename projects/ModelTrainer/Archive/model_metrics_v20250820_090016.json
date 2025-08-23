@@ -1,0 +1,213 @@
+{
+  "Version": "20250820_090016",
+  "CreatedAt": "2025-08-20T15:00:16.690991Z",
+  "DatasetFile": "intent_dataset_v20250820_081659.json",
+  "TotalRecords": 202,
+  "TrainRecords": 0,
+  "TestRecords": 0,
+  "MicroAccuracy": 0.9090909090909091,
+  "MacroAccuracy": 0.9106481481481481,
+  "LogLoss": 0.18085734760124478,
+  "PerClassLogLoss": [
+    {
+      "ClassName": "CONTACT_INFO",
+      "LogLoss": 0.5302107185783302
+    },
+    {
+      "ClassName": "CONTACT_EMAIL",
+      "LogLoss": 0.0008187323711288514
+    },
+    {
+      "ClassName": "CONTACT_HIRE_DATE",
+      "LogLoss": 0.1382166387692239
+    },
+    {
+      "ClassName": "CONTACT_PHONE",
+      "LogLoss": 0.023595231717838533
+    },
+    {
+      "ClassName": "CONTACT_BIRTHDAY",
+      "LogLoss": 0.15910317801912438
+    },
+    {
+      "ClassName": "CONTACT_ADDRESS",
+      "LogLoss": 0.29041430347728125
+    }
+  ],
+  "ConfusionMatrix": [
+    {
+      "TrueClass": "CONTACT_INFO",
+      "Predictions": [
+        {
+          "PredictedClass": "CONTACT_INFO",
+          "Count": 4
+        },
+        {
+          "PredictedClass": "CONTACT_EMAIL",
+          "Count": 0
+        },
+        {
+          "PredictedClass": "CONTACT_HIRE_DATE",
+          "Count": 1
+        },
+        {
+          "PredictedClass": "CONTACT_PHONE",
+          "Count": 0
+        },
+        {
+          "PredictedClass": "CONTACT_BIRTHDAY",
+          "Count": 0
+        },
+        {
+          "PredictedClass": "CONTACT_ADDRESS",
+          "Count": 0
+        }
+      ]
+    },
+    {
+      "TrueClass": "CONTACT_EMAIL",
+      "Predictions": [
+        {
+          "PredictedClass": "CONTACT_INFO",
+          "Count": 0
+        },
+        {
+          "PredictedClass": "CONTACT_EMAIL",
+          "Count": 5
+        },
+        {
+          "PredictedClass": "CONTACT_HIRE_DATE",
+          "Count": 0
+        },
+        {
+          "PredictedClass": "CONTACT_PHONE",
+          "Count": 0
+        },
+        {
+          "PredictedClass": "CONTACT_BIRTHDAY",
+          "Count": 0
+        },
+        {
+          "PredictedClass": "CONTACT_ADDRESS",
+          "Count": 0
+        }
+      ]
+    },
+    {
+      "TrueClass": "CONTACT_HIRE_DATE",
+      "Predictions": [
+        {
+          "PredictedClass": "CONTACT_INFO",
+          "Count": 1
+        },
+        {
+          "PredictedClass": "CONTACT_EMAIL",
+          "Count": 0
+        },
+        {
+          "PredictedClass": "CONTACT_HIRE_DATE",
+          "Count": 9
+        },
+        {
+          "PredictedClass": "CONTACT_PHONE",
+          "Count": 0
+        },
+        {
+          "PredictedClass": "CONTACT_BIRTHDAY",
+          "Count": 0
+        },
+        {
+          "PredictedClass": "CONTACT_ADDRESS",
+          "Count": 0
+        }
+      ]
+    },
+    {
+      "TrueClass": "CONTACT_PHONE",
+      "Predictions": [
+        {
+          "PredictedClass": "CONTACT_INFO",
+          "Count": 0
+        },
+        {
+          "PredictedClass": "CONTACT_EMAIL",
+          "Count": 0
+        },
+        {
+          "PredictedClass": "CONTACT_HIRE_DATE",
+          "Count": 0
+        },
+        {
+          "PredictedClass": "CONTACT_PHONE",
+          "Count": 7
+        },
+        {
+          "PredictedClass": "CONTACT_BIRTHDAY",
+          "Count": 0
+        },
+        {
+          "PredictedClass": "CONTACT_ADDRESS",
+          "Count": 0
+        }
+      ]
+    },
+    {
+      "TrueClass": "CONTACT_BIRTHDAY",
+      "Predictions": [
+        {
+          "PredictedClass": "CONTACT_INFO",
+          "Count": 1
+        },
+        {
+          "PredictedClass": "CONTACT_EMAIL",
+          "Count": 0
+        },
+        {
+          "PredictedClass": "CONTACT_HIRE_DATE",
+          "Count": 0
+        },
+        {
+          "PredictedClass": "CONTACT_PHONE",
+          "Count": 0
+        },
+        {
+          "PredictedClass": "CONTACT_BIRTHDAY",
+          "Count": 8
+        },
+        {
+          "PredictedClass": "CONTACT_ADDRESS",
+          "Count": 0
+        }
+      ]
+    },
+    {
+      "TrueClass": "CONTACT_ADDRESS",
+      "Predictions": [
+        {
+          "PredictedClass": "CONTACT_INFO",
+          "Count": 0
+        },
+        {
+          "PredictedClass": "CONTACT_EMAIL",
+          "Count": 0
+        },
+        {
+          "PredictedClass": "CONTACT_HIRE_DATE",
+          "Count": 0
+        },
+        {
+          "PredictedClass": "CONTACT_PHONE",
+          "Count": 1
+        },
+        {
+          "PredictedClass": "CONTACT_BIRTHDAY",
+          "Count": 0
+        },
+        {
+          "PredictedClass": "CONTACT_ADDRESS",
+          "Count": 7
+        }
+      ]
+    }
+  ]
+}
