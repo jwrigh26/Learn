@@ -16,9 +16,11 @@ public class QueryUnderstandingService
     private readonly PredictionEngine<QueryRecord, IntentPrediction>? _engine;
     private readonly DomainDictionaries _domain;
     private readonly IModel _dateModel;
+    private readonly IEmployeeRepository _employeeRepository; // injected repository
     
-    public QueryUnderstandingService(MSConfiguration configuration)
+    public QueryUnderstandingService(IEmployeeRepository employeeRepository, MSConfiguration configuration)
     {
+        _employeeRepository = employeeRepository;
         _domain = InitializeDomainDictionaries();
         _dateModel = new DateTimeRecognizer(Culture.English, options: DateTimeOptions.None, lazyInitialization: true)
             .GetDateTimeModel();
@@ -49,27 +51,15 @@ public class QueryUnderstandingService
     
     public QueryUnderstanding Understand(string text)
     {
-        var intent = PredictIntent(text);
-        // Get all employees as objects
-        var allEmployeeObjects = typeof(EmployeeQueryOrchestrator)
-            .GetField("Employees", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static)
-            ?.GetValue(null) as List<Employee> ?? new List<Employee>();
-        var allEmployeeNames = allEmployeeObjects.Select(e => e.Name).ToList();
-        // Build fuzzy list from all employee names
-        var foundNames = ExtractNamesFromQuery(text, allEmployeeNames);
-        Console.WriteLine($"Matched names: {string.Join(", ", foundNames)} for query: {text}");
-        // Build slots after filtering names
-        var slots = ExtractSlots(text, _domain, foundNames);
-
-        // filteredEmployees is the list of Employee objects whose names were matched
-        var filteredEmployees = allEmployeeObjects
-            .Where(e => foundNames.Contains(e.Name, StringComparer.OrdinalIgnoreCase))
-            .ToList();
+        // For now return all employees and the name-variant map for testing
+        var all = _employeeRepository.GetAllEmployees();
+        var map = _employeeRepository.GetNameVariantMap();
 
         return new QueryUnderstanding {
-            Intent = intent,
-            Slots = slots,
-            // Employees = filteredEmployees,
+            Intent = Intent.UNKNOWN,
+            Slots = new QuerySlots(),
+            Employees = all,
+            NameVariantMap = map
         };
     }
 

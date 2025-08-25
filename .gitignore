@@ -49,7 +49,7 @@ TestResults/
 # ML.NET model files (optional - might want to track some)
 *.zip
 Output/
-Data/
+Data/intent_dataset*.json
 
 # OS generated files
 .DS_Store

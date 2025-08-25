@@ -1,0 +1,59 @@
+===== BACKUP OF ORIGINAL Understand METHOD =====
+Date: August 22, 2025
+This is the original implementation before refactoring
+
+public QueryUnderstanding Understand(string text)
+{
+    var intent = PredictIntent(text);
+    // Get all employees as objects
+    var allEmployeeObjects = typeof(EmployeeQueryOrchestrator)
+        .GetField("Employees", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static)
+        ?.GetValue(null) as List<Employee> ?? new List<Employee>();
+    var allEmployeeNames = allEmployeeObjects.Select(e => e.Name).ToList();
+    // Build fuzzy list from all employee names
+    var foundNames = ExtractNamesFromQuery(text, allEmployeeNames);
+    Console.WriteLine($"Matched names: {string.Join(", ", foundNames)} for query: {text}");
+    // Build slots after filtering names
+    var slots = ExtractSlots(text, _domain, foundNames);
+
+    // filteredEmployees is the list of Employee objects whose names were matched
+    var filteredEmployees = allEmployeeObjects
+        .Where(e => foundNames.Contains(e.Name, StringComparer.OrdinalIgnoreCase))
+        .ToList();
+
+    return new QueryUnderstanding {
+        Intent = intent,
+        Slots = slots,
+        // Employees = filteredEmployees,
+    };
+}
+
+===== SUPPORTING METHODS (still available in the class) =====
+- PredictIntent(string text)
+- ExtractNamesFromQuery(string text, List<string> employeeNames)  
+- ExtractSlots(string text, DomainDictionaries domain, List<string> foundNames)
+- MapCanonical(string text, Dictionary<string,string> dict)
+- ContainsAny(string text, params string[] terms)
+- Normalize(string s)
+- InitializeDomainDictionaries()
+
+===== WHAT THE ORIGINAL METHOD DID =====
+1. Predicted intent using ML model + fallback rules
+2. Used reflection to get employee list from EmployeeQueryOrchestrator
+3. Extracted employee names from query text using fuzzy matching
+4. Built slots by parsing domain terms and dates
+5. Filtered employees based on matched names
+6. Returned QueryUnderstanding with intent, slots (and commented out employees)
+
+===== NOTES FOR REFACTORING =====
+- The reflection-based employee fetching might need to be replaced
+- Name extraction logic could be simplified/improved
+- Slot extraction might need restructuring based on new domain mappings
+- Consider separating concerns (intent vs slots vs employees)
+- The console logging might need to be replaced with proper logging
+
+
+
+===== Next Steps ====
+- Implement full name-matching in Understand using the repository's name variants, or
+- Add an endpoint to expose QueryUnderstanding for quick API testing. 

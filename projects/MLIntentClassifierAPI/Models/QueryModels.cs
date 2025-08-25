@@ -26,6 +26,8 @@ public sealed class QueryUnderstanding
     public Intent Intent { get; set; }
     public QuerySlots Slots { get; set; } = new();
     public List<Employee> Employees { get; set; } = new();
+    // Map of employee id -> generated name variants for fuzzy matching (used for testing)
+    public Dictionary<int, List<string>> NameVariantMap { get; set; } = new();
 }
 
 public sealed class QueryRecord 

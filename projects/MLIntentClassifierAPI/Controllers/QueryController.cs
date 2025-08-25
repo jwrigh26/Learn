@@ -39,6 +39,7 @@ public class QueryController : ControllerBase
                 },
                 slots = understanding.Slots,
                 employees = understanding.Employees,
+                nameVariations = understanding.NameVariantMap,
             };
             return Ok(result);
         }
