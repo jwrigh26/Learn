@@ -5,6 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddSingleton<IEmployeeRepository, EmployeeRepository>();
+builder.Services.AddSingleton<IFuzzyService, FuzzyService>();
 builder.Services.AddSingleton<QueryUnderstandingService>();
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

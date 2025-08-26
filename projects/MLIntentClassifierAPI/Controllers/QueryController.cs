@@ -9,11 +9,19 @@ namespace MLIntentClassifierAPI.Controllers;
 public class QueryController : ControllerBase
 {
     private readonly QueryUnderstandingService _queryService;
+    private readonly IEmployeeRepository _employeeRepository;
+    private readonly IFuzzyService _fuzzyService;
     private readonly ILogger<QueryController> _logger;
 
-    public QueryController(QueryUnderstandingService queryService, ILogger<QueryController> logger)
+    public QueryController(
+        QueryUnderstandingService queryService, 
+        IEmployeeRepository employeeRepository,
+        IFuzzyService fuzzyService,
+        ILogger<QueryController> logger)
     {
         _queryService = queryService;
+        _employeeRepository = employeeRepository;
+        _fuzzyService = fuzzyService;
         _logger = logger;
     }
 
@@ -85,6 +93,49 @@ public class QueryController : ControllerBase
         }).ToList();
 
         return Ok(results);
+    }
+
+    [HttpPost("test-fuzzy")]
+    public ActionResult<object> TestFuzzy([FromBody] QueryRequest request)
+    {
+        if (string.IsNullOrWhiteSpace(request.Text))
+        {
+            return BadRequest("Query text cannot be empty");
+        }
+
+        try
+        {
+            var nameVariantMap = _employeeRepository.GetNameVariantMap();
+            var matches = _fuzzyService.ExtractNamesFromQuery(request.Text, nameVariantMap);
+            
+            // Get the actual employee objects for the matches
+            var employeeIds = matches.Select(m => m.EmployeeId).Distinct().ToList();
+            var employees = _employeeRepository.GetEmployeesByIds(employeeIds);
+            
+            var result = new {
+                query = request.Text,
+                nameMatches = matches.Select(m => new {
+                    employeeId = m.EmployeeId,
+                    employee = employees.FirstOrDefault(e => e.Id == m.EmployeeId),
+                    matchedVariant = m.MatchedVariant,
+                    queryToken = m.QueryToken,
+                    score = m.Score,
+                    matchType = m.MatchType
+                }).ToList(),
+                summary = new {
+                    totalMatches = matches.Count,
+                    uniqueEmployees = employeeIds.Count,
+                    averageScore = matches.Any() ? matches.Average(m => m.Score) : 0
+                }
+            };
+
+            return Ok(result);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error in fuzzy name matching for query: {Query}", request.Text);
+            return StatusCode(500, "An error occurred while processing the fuzzy search");
+        }
     }
 }
 
