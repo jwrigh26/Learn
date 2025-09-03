@@ -172,9 +172,12 @@ public class FuzzyService : IFuzzyService
         }
 
         // Remove duplicates and sort by score (best matches first)
+        // Group by employee ID only - one result per employee, keeping the best match
         return allMatches
-            .GroupBy(m => new { m.EmployeeId, m.MatchedVariant })
-            .Select(g => g.OrderByDescending(m => m.Score).First())
+            .GroupBy(m => m.EmployeeId)
+            .Select(g => g.OrderByDescending(m => m.Score)
+                          .ThenBy(m => m.MatchType == "exact" ? 0 : m.MatchType == "substring" ? 1 : 2)
+                          .First())
             .OrderByDescending(m => m.Score)
             .ThenBy(m => m.MatchType == "exact" ? 0 : m.MatchType == "substring" ? 1 : 2)
             .ToList();
