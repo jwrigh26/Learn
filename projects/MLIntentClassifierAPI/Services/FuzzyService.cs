@@ -13,6 +13,15 @@ public class NameMatch
     public string MatchType { get; set; } = ""; // "exact", "fuzzy", "substring"
 }
 
+public class FieldValueMatch
+{
+    public string FieldType { get; set; } = ""; // e.g., "department"
+    public string CanonicalValue { get; set; } = ""; // e.g., "R&D"
+    public string QueryToken { get; set; } = "";
+    public int Score { get; set; }
+    public string MatchType { get; set; } = ""; // "exact", "substring", "fuzzy"
+}
+
 public interface IFuzzyService
 {
     /// <summary>
@@ -24,10 +33,17 @@ public interface IFuzzyService
     /// <param name="minScore">Minimum fuzzy score threshold (default 85)</param>
     /// <returns>List of name matches with scores and metadata</returns>
     List<NameMatch> ExtractNamesFromQuery(string text, Dictionary<int, List<string>> nameVariantMap, int topN = 3, int minScore = 85);
+
+    /// <summary>
+    /// Extracts best-matching values for generic fields (e.g., department/location/position/job) from a query.
+    /// Returns matches with field type, canonical value, token/value matched, score and match type.
+    /// </summary>
+    List<FieldValueMatch> ExtractFieldValuesFromQuery(string text, Dictionary<string, List<string>> fieldToValues, int topN = 3, int minScore = 85);
 }
 
 public class FuzzyService : IFuzzyService
 {
+
     public List<NameMatch> ExtractNamesFromQuery(string text, Dictionary<int, List<string>> nameVariantMap, int topN = 3, int minScore = 85)
     {
         if (string.IsNullOrWhiteSpace(text) || nameVariantMap == null || !nameVariantMap.Any())
@@ -180,6 +196,66 @@ public class FuzzyService : IFuzzyService
                           .First())
             .OrderByDescending(m => m.Score)
             .ThenBy(m => m.MatchType == "exact" ? 0 : m.MatchType == "substring" ? 1 : 2)
+            .ToList();
+    }
+
+    public List<FieldValueMatch> ExtractFieldValuesFromQuery(string text, Dictionary<string, List<string>> fieldToValues, int topN = 3, int minScore = 85)
+    {
+        if (string.IsNullOrWhiteSpace(text) || fieldToValues == null || fieldToValues.Count == 0)
+            return new List<FieldValueMatch>();
+
+        var tokens = text.Split(new[] { ' ', ',', ';', ':', '\t' }, StringSplitOptions.RemoveEmptyEntries)
+            .Select(t => t.Trim(new[] { '.', '?', '!', '"', '\'' }))
+            .Select(t => t.EndsWith("'s", StringComparison.OrdinalIgnoreCase) ? t[..^2] : t)
+            .Where(t => t.Length > 1)
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .ToList();
+
+        var matches = new List<FieldValueMatch>();
+
+        foreach (var (field, values) in fieldToValues)
+        {
+            if (values == null || values.Count == 0) continue;
+
+            // Exact and substring checks first
+            foreach (var token in tokens)
+            {
+                // Exact
+                var exact = values.Where(v => string.Equals(v, token, StringComparison.OrdinalIgnoreCase))
+                    .Select(v => new FieldValueMatch { FieldType = field, CanonicalValue = v, QueryToken = token, Score = 100, MatchType = "exact" });
+                matches.AddRange(exact);
+
+                if (!exact.Any() && token.Length >= 3)
+                {
+                    // Substring with word boundaries preference
+                    var subs = values.Where(v =>
+                            v.Contains(token, StringComparison.OrdinalIgnoreCase) ||
+                            token.Contains(v, StringComparison.OrdinalIgnoreCase))
+                        .Select(v => new FieldValueMatch { FieldType = field, CanonicalValue = v, QueryToken = token, Score = 95, MatchType = "substring" });
+                    matches.AddRange(subs);
+                }
+            }
+
+            // Fuzzy fallback per field if nothing strong found
+            if (!matches.Any(m => m.FieldType.Equals(field, StringComparison.OrdinalIgnoreCase)))
+            {
+                var tokenString = string.Join(' ', tokens);
+                var best = FuzzySharp.Process.ExtractTop(tokenString, values, limit: topN)
+                    .Where(r => r.Score >= minScore);
+                foreach (var r in best)
+                {
+                    matches.Add(new FieldValueMatch { FieldType = field, CanonicalValue = r.Value, QueryToken = tokenString, Score = r.Score, MatchType = "fuzzy" });
+                }
+            }
+        }
+
+        // Keep best per field value
+        return matches
+            .GroupBy(m => (m.FieldType, m.CanonicalValue))
+            .Select(g => g.OrderByDescending(x => x.Score)
+                          .ThenBy(x => x.MatchType == "exact" ? 0 : x.MatchType == "substring" ? 1 : 2)
+                          .First())
+            .OrderByDescending(x => x.Score)
             .ToList();
     }
 }

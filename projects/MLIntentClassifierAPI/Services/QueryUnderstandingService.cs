@@ -1,8 +1,6 @@
 using System.Text.RegularExpressions;
 using Microsoft.ML;
 using Microsoft.ML.Data;
-using Microsoft.Recognizers.Text;
-using Microsoft.Recognizers.Text.DateTime;
 using FuzzySharp;
 using MLIntentClassifierAPI.Models;
 using MSConfiguration = Microsoft.Extensions.Configuration.IConfiguration;
@@ -15,15 +13,12 @@ public class QueryUnderstandingService
 {
     private readonly PredictionEngine<QueryRecord, IntentPrediction>? _engine;
     private readonly DomainDictionaries _domain;
-    private readonly IModel _dateModel;
-    private readonly IEmployeeRepository _employeeRepository; // injected repository
+    private readonly ISlotService _slotService;
     
-    public QueryUnderstandingService(IEmployeeRepository employeeRepository, MSConfiguration configuration)
+    public QueryUnderstandingService(MSConfiguration configuration, ISlotService slotService)
     {
-        _employeeRepository = employeeRepository;
         _domain = InitializeDomainDictionaries();
-        _dateModel = new DateTimeRecognizer(Culture.English, options: DateTimeOptions.None, lazyInitialization: true)
-            .GetDateTimeModel();
+        _slotService = slotService;
         
         // Load ML.NET model from ModelTrainer output (configured path)
         string modelPath;
@@ -51,15 +46,14 @@ public class QueryUnderstandingService
     
     public QueryUnderstanding Understand(string text)
     {
-        // For now return all employees and the name-variant map for testing
-        var all = _employeeRepository.GetAllEmployees();
-        var map = _employeeRepository.GetNameVariantMap();
+        // Pure NLP processing - intent prediction and slot extraction
+        var intent = PredictIntent(text);
+    var slots = _slotService.ExtractSlots(text);
 
         return new QueryUnderstanding {
-            Intent = Intent.UNKNOWN,
-            Slots = new QuerySlots(),
-            Employees = all,
-            NameVariantMap = map
+            Intent = intent,
+            Slots = slots
+            // No employees here - that's the controller's responsibility
         };
     }
 
@@ -114,86 +108,6 @@ public class QueryUnderstandingService
         return Intent.UNKNOWN;
     }
     
-    private QuerySlots ExtractSlots(string text, DomainDictionaries domain, List<string> foundNames)
-    {
-        text = Normalize(text);
-        var slots = new QuerySlots();
-
-        // Field + operator from phrasing
-        if (ContainsAny(text, "hire date","hired","start date","joined"))
-        {
-            // QuerySlots now has a list of Fields
-            slots.Fields.Add("OriginalHireDate");
-            if (ContainsAny(text, "before","earlier than","prior to")) slots.Operator = "before";
-            else if (ContainsAny(text, "after","later than","since")) slots.Operator = "after";
-            else if (ContainsAny(text, "between","from","to","range")) slots.Operator = "between";
-        }
-
-        // NOTE: QuerySlots no longer contains Department/Role/Location properties
-        // Map domain matches into Fields (as canonical tokens) if needed by downstream logic
-        var dept = MapCanonical(text, domain.Departments);
-        if (!string.IsNullOrEmpty(dept)) slots.Fields.Add($"department:{dept}");
-        var role = MapCanonical(text, domain.Roles);
-        if (!string.IsNullOrEmpty(role)) slots.Fields.Add($"role:{role}");
-        var loc = MapCanonical(text, domain.Locations);
-        if (!string.IsNullOrEmpty(loc)) slots.Fields.Add($"location:{loc}");
-
-        // Date parsing (supports "before 2024", "last year", ranges, etc.)
-        var dateResults = _dateModel.Parse(text);
-        // pick first resolution; improve as needed
-        foreach (var r in dateResults)
-        {
-            if (!r.Resolution.TryGetValue("values", out var valuesObj)) continue;
-            if (valuesObj is not List<Dictionary<string, string>> values) continue;
-
-            foreach (var v in values)
-            {
-                if (!v.TryGetValue("type", out var type)) continue;
-                if (type == "date" && v.TryGetValue("value", out var val))
-                {
-                    if (DateTime.TryParse(val, out var d))
-                    {
-                        // For single dates: store as Date. If operator indicates a bound, convert to Range.
-                        if (slots.Operator == "before")
-                        {
-                            slots.Range ??= new DateRange();
-                            slots.Range.End = d;
-                        }
-                        else if (slots.Operator == "after")
-                        {
-                            slots.Range ??= new DateRange();
-                            slots.Range.Start = d;
-                        }
-                        else
-                        {
-                            // default: prefer Date for single specific dates
-                            slots.Date ??= d;
-                        }
-                    }
-                }
-                else if (type == "daterange")
-                {
-                    if (v.TryGetValue("start", out var s) && DateTime.TryParse(s, out var ds))
-                        slots.Range ??= new DateRange { Start = ds };
-                    if (v.TryGetValue("end", out var e) && DateTime.TryParse(e, out var de))
-                        slots.Range ??= new DateRange { End = de };
-                    // If we created a partial Range above, ensure both bounds set when possible
-                    if (slots.Range != null)
-                    {
-                        if (slots.Range.Start == default && v.TryGetValue("start", out var s2) && DateTime.TryParse(s2, out var ds2))
-                            slots.Range.Start = ds2;
-                        if (slots.Range.End == default && v.TryGetValue("end", out var e2) && DateTime.TryParse(e2, out var de2))
-                            slots.Range.End = de2;
-                    }
-                    slots.Operator ??= "between";
-                }
-            }
-        }
-
-
-        return slots;
-    }
-    
     private static string Normalize(string s) =>
         Regex.Replace(s, @"\s+", " ").Trim();
 
@@ -203,10 +117,7 @@ public class QueryUnderstandingService
     // map synonyms using dictionary; returns canonical if matched
     private static string? MapCanonical(string text, Dictionary<string,string> dict)
     {
-        // exact/single-token match first
         if (dict.TryGetValue(text, out var canonical)) return canonical;
-
-        // contains-phrase match
         foreach (var kvp in dict)
         {
             if (text.Contains(kvp.Key, StringComparison.OrdinalIgnoreCase))

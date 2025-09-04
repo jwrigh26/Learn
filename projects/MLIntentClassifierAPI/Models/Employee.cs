@@ -17,6 +17,7 @@ public class Employee
     public string Department { get; set; } = "";
     public string Location { get; set; } = "";
     public string Position { get; set; } = "";
+    public string Job { get; set; } = "";
     public string OriginalHireDate { get; set; } = "";
     public string Status { get; set; } = "";
     public string Title { get; set; } = "";
